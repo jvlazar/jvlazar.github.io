@@ -23,11 +23,17 @@ body {
 }
 
 .date {
+  display: block;
     font-size: 18px;
+    margin-top: -20px;
+    margin-bottom: 20px;
 }
 
 a {
-   vertical-align: center;
+    display: block;
+    margin-top: -20px;
+    padding-bottom: 30px;
+    vertical-align: center;
     font-size: 20px;
 }
 
@@ -41,6 +47,7 @@ a {
     background-color: lightgray;
     font-size: 30px;
     float: left;
+  
 }
 
 .inner {
@@ -48,23 +55,25 @@ a {
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%;
-    
     border-radius: 5%;
 }
 
 a:link{
     color:blue;
   }
-  a:visited{
-    color:blue;
-  }
-  a:hover{
-    color:rgb(117, 157, 213);
-  }
-  a:focus{
-    color:blue;
-  }
-  a:active{
-    color:blue;
-  }
-  
+
+a:visited{
+  color:blue;
+}
+
+a:hover{
+  color:rgb(117, 157, 213);
+}
+
+a:focus{
+  color:blue;
+}
+
+a:active{
+  color:blue;
+}
