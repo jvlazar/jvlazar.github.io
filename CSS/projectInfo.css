@@ -1,0 +1,30 @@
+h1 {
+    
+}
+
+
+a:link{
+    color:blue;
+    }
+  
+  a:visited{
+    color:blue;
+  }
+  
+  a:hover{
+    color:rgb(117, 157, 213);
+  }
+  
+  a:focus{
+    color:blue;
+  }
+  
+  a:active{
+    color:blue;
+  }
+  
+
+  .project_photos img {
+    width: 500px;
+    height: 350px;
+  }
