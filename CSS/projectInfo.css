@@ -52,9 +52,27 @@ a:active{
 }
 
 
-.specific_project_info{
+.basic_project_info{
+  border-style: solid;
+  border-width: 20px;
+  border-radius: 5%;
+  border-color: lightgray;
   background-color:rgb(238, 237, 237);
-  margin-right: 50%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-top: 0%;
+  padding-bottom: 3%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.basic_project_info a:link, a:visited{
+    color: blue;
+}
+
+.specific_project_info{
+  width: 50%;
+  background-color:rgb(238, 237, 237);
   margin-bottom: auto;
   padding-top: 1%;
   padding-bottom: 7%;
@@ -63,7 +81,7 @@ a:active{
   border-radius: 10%;
   border-bottom-right-radius: 30%;
   border-style: solid;
-  border-color:  lightgray;
+  border-color: lightgray;
   border-width: 30px;
 }
 
@@ -94,14 +112,21 @@ a:active{
   word-wrap: break-word;
 }
 
+.content {
+  display: inline-flex;
+  width: 95%;
+}
 
-.basic_project_info{
-  background-color: lightgray;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  padding-top: 0%;
-  padding-bottom: 3%;
+.specific_project_content{
+  width: 30%;
+}
 
+#main_photo{
+  height: 50%;
+  width: 120%;
+  margin-left: 10%;
+  margin-top: 35%;
+  
 }
 
 .project_photos {
@@ -115,18 +140,19 @@ a:active{
 
 
 button {
-  margin-left: 90%;
+  margin-left: 60%;
+  margin-top: 10%;
   width: 100px;
   height: 100px;
   font-size: 25px;
   border-radius: 20%;
   border-style: solid;
-  border-color: rgb(145, 168, 145);
-  background-color: rgb(145, 168, 145);
+  border-color: rgb(181, 152, 228);
+  background-color: rgb(181, 152, 228);
 }
 
 button:hover{
-  background-color: rgb(202, 230, 202);
-  border-color: rgb(202, 230, 202);
+  border-color: rgb(204, 186, 233);
+  background-color: rgb(204, 186, 233);
   border-style: solid;
 }
