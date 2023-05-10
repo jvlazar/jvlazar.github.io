@@ -131,6 +131,7 @@ a:active{
 
  /* Style the tab */
  .tab {
+  width: 50%;
   overflow: hidden;
   display: inline-flex;
  
@@ -165,3 +166,35 @@ a:active{
   padding: 6px 12px;
   border-top: none;
 } 
+
+#projects_button.active, #projects_button:hover {
+  background-color: white;
+  border-color: rgb(253, 131, 131);
+  border-style: solid;
+  border-width: 3px;
+}
+
+#skills_button.active, #skills_button:hover {
+  background-color: white;
+  border-color: rgb(127, 127, 240);
+  border-style: solid;
+  border-width: 3px;
+}
+
+
+#resume_button.active, #resume_button:hover {
+  background-color: white;
+  border-color: rgb(120, 229, 120);
+  border-style: solid;
+  border-width: 3px;
+}
+
+
+#contact_button.active, #contact_button:hover {
+  background-color: white;
+  border-color: rgb(233, 189, 122);
+  border-style: solid;
+  border-width: 3px;
+}
+
+

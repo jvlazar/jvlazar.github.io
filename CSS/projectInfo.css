@@ -138,12 +138,14 @@ button {
   height: 100px;
   font-size: 25px;
   border-radius: 20%;
-  border-style: solid;
+  border-style: none;
   border-color: rgb(181, 152, 228);
   background-color: rgb(181, 152, 228);
 }
 
 button:hover{
+  cursor: pointer;
+  border-width: 3px;
   border-color: rgb(204, 186, 233);
   background-color: rgb(204, 186, 233);
   border-style: solid;
