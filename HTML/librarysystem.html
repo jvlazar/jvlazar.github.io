@@ -4,10 +4,107 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jvlazar | Library System Website</title>
+    <link rel="stylesheet" href="/CSS/projectInfo.css">
+    <title>jvlazar | Library System</title>
 </head>
 <body>
-    <h1> WIP -- Specific project info page</h1>    
-    
+
+    <div class="header">
+        <a href="../index.html"> <img class="home_icon" src="../images/icons/home.svg"> Jessica Lazar || jvlazar</a>  
+    </div>
+
+    <h1>Library System</h1>    
+
+    <section class="basic_project_info">
+        <h2>Project Information</h2>
+        <p> <b>Project Title: </b>Library System</p>
+        <p> <b>Project Languages: </b>HTML, CSS, C++</p>
+        
+        <p class="project_description"> <b>Project Description: </b> <p>This project was created for a university class
+            (Human-Computer Interaction). This term-long project allowed us to design and implement a library system
+            from scratch (from sketches to functional prototype).</p> <p>
+                The user is able to:
+                <ul>
+                    <li>Login</li>
+                    <li>Look up an item (book, dvd, cd, event)</li>
+                    <li>Sign up for an event (for 1 or multiple seats)</li>
+                    <li>Place an item on hold</li>
+                    <li>Select pickup branch</li>
+                    <li>Add item to wishlist</li>
+                    <li>Remove item from wishlist</li>
+                    <li>Renew item checked out</li>
+                </ul>
+            </p>
+        </p>
+        
+    </section>
+
+    <div class="content"> 
+        <section class="specific_project_info">
+            <h2> Project Specifics</h2>
+            
+            <p> Things I Learned: </p>
+                <ul>
+                    <li>Basic principles of C++ (i.e. functions, variables, etc) </li>
+                    <li>Learning the difference between the different "display" properties (i.e. flex vs. block)</li>
+                    <li>Adding HTML elements depending on certain conditions using C++ </li>
+                    <li>How to have a handful of centralized file that will contain our user and item information 
+                        that will allow other Razor pages and components access that information </li>
+                        <ul>Solution:
+                            <li>Injecting dependency</li>
+                            <li>Adding singleton service </li>
+                        </ul>
+                   <li>How to pass information on a specific item to a Modal in a foreach loop (rather
+                    than the modal only being passed the last item in the loop)
+                   </li>
+                </ul>
+            <p> Things I Enjoyed: </p>
+                <ul>
+                    <li>Learning basic C++ syntax and functionality </li>
+                    <li>Designing the look of the website </li>
+                    <li>Figuring out how to make the code as easy to understand (and access) as possible for other
+                        group members
+                    </li>
+                    <li>Creating template layouts for an item page and learning how to change the details to 
+                        be specific to that item (i.e. get the photo for that specific item)
+                    </li>
+                </ul>
+            <p> Things I'd do Differently: </p>
+                <ul>
+                    <li>Hook up an actual database to the system
+                        <ul>Comment:
+                            <li>We were told not to worry about creating an SQL database, or the like, and were
+                                encouraged to hold our data in arrays/lists
+                            </li>
+                            <li>As a result, a lot of time was spent into trying to make our "database" accessbile
+                                to all Razor pages and components
+                            </li>
+                            <li>The solution to this, as stated above, was to create services and to 
+                                inject them into the files that needed them
+                            </li>
+                        </ul> </li>
+                </ul>
+            <p> Challenges that were Faced: </p>
+                <ul>
+                    <li>Understanding how to user dependency injection </li>
+        
+                
+                </ul>
+        
+        </section>
+        <section class="specific_project_content">
+            <img id="main_photo" src="">
+            
+
+        </section>
+        
+    </div>
+
+    <section class="project_photos">
+        <h2> Project Photos</h2>
+        
+
+
+    </section>
 </body>
 </html>
