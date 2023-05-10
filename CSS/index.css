@@ -144,7 +144,7 @@ a:active{
   margin-left: auto;
   margin-right: auto;
   background-color: inherit;
-  border: none;
+  border: white;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
@@ -156,7 +156,6 @@ a:active{
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
   width: 100%;
   height: 80%;
 }
