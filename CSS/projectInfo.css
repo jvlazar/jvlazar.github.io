@@ -110,10 +110,13 @@ body {
 }
 
 .specific_project_content{
-  width: 30%;
+  position: relative;
+  display: block;
+  width: 33%;
 }
 
 #main_photo{
+  position: relative;
   height: 50%;
   width: 120%;
   margin-left: 10%;
@@ -130,6 +133,9 @@ body {
   height: 350px;
 }
 
+#main_photo_caption{
+  margin-left: 50%;
+}
 
 button {
   margin-left: 60%;
@@ -138,15 +144,16 @@ button {
   height: 100px;
   font-size: 25px;
   border-radius: 20%;
-  border-style: none;
-  border-color: rgb(181, 152, 228);
-  background-color: rgb(181, 152, 228);
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(184, 184, 184);
+  background-color: lightgray;
 }
 
 button:hover{
   cursor: pointer;
   border-width: 3px;
-  border-color: rgb(204, 186, 233);
-  background-color: rgb(204, 186, 233);
+  border-color: rgb(216, 216, 216);
+  background-color: rgb(231, 231, 231);
   border-style: solid;
 }
