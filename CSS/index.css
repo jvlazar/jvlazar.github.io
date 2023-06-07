@@ -48,12 +48,18 @@ body {
   margin-right: 25%;
   font-size: 20px;
   line-height: 35px;
+  
 }
 
 .about {
   font-size: 40px;
   margin-left: 25%;
   margin-right: 25%;
+ 
+}
+
+.text{
+  margin-top: 2em;
 }
 
 .title{
