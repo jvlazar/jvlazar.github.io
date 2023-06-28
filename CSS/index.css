@@ -2,8 +2,10 @@
   /* Base colours */
   --dark-blue: rgb(0, 28, 48);
   --medium-blue: rgb(23, 107, 135);
-  --light-blue: rgb(100, 204, 197);
+  --light-blue: hsl(176, 50%, 60%);
   --highlight-blue: rgb(218, 255, 251);
+
+  --light-blue-trans: hsla(176, 50%, 60%, 30%);
 
 
   /* Font */
@@ -11,6 +13,10 @@
   text-align: center;
   display: block;
   background-color: white;
+}
+
+body{
+  margin: -1em;
 }
 
 .banner{
@@ -116,9 +122,11 @@
   background-size: cover;
 }
 
+
+
+
+
 @media (width >= 700px){
-
-
   .banner{
     background: linear-gradient(var(--dark-blue), var(--medium-blue));
     color: white;
@@ -163,8 +171,9 @@
   }
 
   .card:hover{
-    animation: blur 0.5s;
-    filter: blur(4px);
+    animation: blur 0.20s;
+    filter: blur(5px);
+    border-color: var(--light-blue);
   }
 
   .projects .title{
@@ -175,12 +184,15 @@
   @keyframes blur {
     0%{
       filter: blur(0px);
+     
     }
     50%{
       filter: blur(2px);
+     
     }
     100%{
       filter: blur(4px);
+     
     }
     
   }
