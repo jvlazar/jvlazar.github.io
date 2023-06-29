@@ -172,42 +172,76 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
-    background-color: red;
   }
 
-  .card {
+  .container {
+    position: relative;
+    margin: 5vw 0;
     height: 25vw;
     width: 20vw;
-    overflow: hidden;
+    border-width: 5%;
+    border-style: none;
   }
 
 
-  .cardTitle{
+  .card {
     position: absolute;
     height: 25vw;
     width: 20vw;
-    background-color: blue;
-    color: rgb(0, 0, 0);
-    font-size: 2vw;
-    opacity: 1;
-    border-width: 5%;
-    border-style: none;
-    border-radius: 1em;
+    overflow: hidden;
+    margin: 0;
+    border:none;
     
   }
 
-  .card:hover{
+ 
+  .cardTitle{
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 2vw;
+    height: 25vw;
+    width: 20vw;
+    opacity: 0;
+  }
+
+  .cardTitle p{
+    margin: auto;
+    margin-top: 50%;
+   
+  }
+
+  .container:hover .card{
     filter: blur(6px);
+    animation: blur 0.25s;
     border-color: var(--light-blue);  
   }
 
-
-
-
+  .container:hover .cardTitle{
+    opacity: 1;
+    animation: appear 0.5s;
+    color: white;
+    background-color: rgba(47, 225, 244, 0.3);
+    border-radius: 1em;
+    box-shadow: 0px 0px 16px 0px  rgba(47, 225, 244, 0.3);
+  
+  }
 
   .projects .title{
     font-size: 1.25vw;
     visibility: hidden;
+  }
+
+
+  @keyframes appear{
+    0%{
+      opacity: 0;
+    }
+    50%{
+     opacity: 0.3;
+    }
+    100%{
+      opacity: 1;
+    }
   }
 
 
