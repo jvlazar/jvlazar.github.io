@@ -63,7 +63,11 @@ body{
   color: var(--highlight-blue);
 }
 
-.title{
+.header{
+  font-size: 4vw;
+}
+
+.title {
   font-size: 3vw;
 }
 
@@ -72,12 +76,12 @@ body{
   align-items: center;
 }
 
-.column a:link{
+.container a:link{
   color: black;
   text-decoration: none;
 }
 
-.column a:visited{
+.container a:visited{
   color: black;
   text-decoration: none;
 }
@@ -93,17 +97,14 @@ body{
   margin: 2em auto;
 }
 
-.card img{
-  visibility: hidden;
-}
-
 
 .projects .title{
-  margin-top: -1em;
+  margin-top: -1.5em;
 }
 
 .cardTitle{
   color: rgba(0, 0, 0, 0);
+  display: none;
 }
 
 .results{
@@ -159,6 +160,10 @@ body{
     max-width: 90%;
     margin: auto;
   }
+  
+  .header{
+    font-size: 3vw;
+  }
 
   .tab button{
     margin: 0 1em;
@@ -196,6 +201,7 @@ body{
 
  
   .cardTitle{
+    display: flex;
     position: absolute;
     color: rgb(0, 0, 0);
     font-size: 2vw;
@@ -223,7 +229,10 @@ body{
     background-color: rgba(47, 225, 244, 0.3);
     border-radius: 1em;
     box-shadow: 0px 0px 16px 0px  rgba(47, 225, 244, 0.3);
-  
+  }
+
+  .summaryTitle.light{
+    color: black;
   }
 
   .projects .title{
@@ -240,7 +249,7 @@ body{
      opacity: 0.3;
     }
     100%{
-      opacity: 1;
+      opacity: 0.9;
     }
   }
 
