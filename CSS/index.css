@@ -160,7 +160,7 @@ body{
     max-width: 90%;
     margin: auto;
   }
-  
+
   .header{
     font-size: 3vw;
   }
@@ -171,6 +171,22 @@ body{
     height: 3vw;
     cursor: pointer;
     font-size: 1.5vw;
+   
+  }
+
+  .tab button:hover{
+    width: 15vw;
+    height: 3vw;
+    border-bottom-color: var(--light-blue);
+    color: var(--highlight-blue);
+  }
+
+  .tab button.active{
+    width: 15vw;
+    height: 6vw;
+    font-size: 2.25vw;
+    border-bottom-color: var(--light-blue);
+    color: var(--highlight-blue);
   }
 
   .projects{
@@ -201,7 +217,7 @@ body{
 
  
   .cardTitle{
-    display: flex;
+    display: block;
     position: absolute;
     color: rgb(0, 0, 0);
     font-size: 2vw;
@@ -210,9 +226,10 @@ body{
     opacity: 0;
   }
 
-  .cardTitle p{
+  .summaryTitle{
     margin: auto;
-    margin-top: 50%;
+    margin-top: 30%;
+
    
   }
 
