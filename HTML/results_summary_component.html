@@ -10,29 +10,42 @@
 </head>
 
 <body>
+    <div class="container">
     <div class="header">
-        <a href="../index.html"> <img class="home_icon" src="../images/icons/home.svg"> Jessica Lazar || jvlazar</a>
+        <a href="../index.html"> <img class="home_icon" src="../images/icons/home.svg"> <p>Jessica Lazar || jvlazar</p></a>
     </div>
 
-    <h1>Results Summary Component (WIP as of June 21st)</h1>
-
-    <section class="basic_project_info">
-        <h2>Project Information</h2>
-        <p> <b>Project Title: </b> Results Summary Component</p>
-        <p> <b>Project Languages: </b>HTML, CSS</p>
-        <p> <b>Project Referenced From </b>:
-            <a href="https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV">
-                Frontend Mentor - Results Summary Component (Click to visit page)
+    <h1>Results Summary Component</h1>
+    <div class="gridContainer">
+    <div class="column">
+        <section class="specific_project_content">
+            <a href="/FrontendMentor_resultsSummaryComponent/">
+                <img id="main_photo" class="main_photo results" src="../images/results_summary/preview.png">
+                <p id="main_photo_caption">Results Summary Component </p>
             </a>
+            <a href="/FrontendMentor_resultsSummaryComponent/"> <button class="button tryMe" onclick=""> Try Me! </button> </a>
+            
+            <a href="https://github.com/jvlazar/FrontendMentor_resultsSummaryComponent"> <button class="button code" onclick="">Code </button> </a>
+        </section>
+    </div>
+    <div class="column">
+        <section class="basic_project_info">
+            <h2>Project Information</h2>
+            <p> <b>Project Title: </b> Results Summary Component</p>
+            <p> <b>Project Languages: </b>HTML, CSS</p>
+            <p> <b>Project Referenced From </b>:
+                <a href="https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV">
+                    Frontend Mentor - Results Summary Component
+                </a>
+    
+            <p class="project_description"> <b>Project Description: </b>
+            <p>This project replicates the results summary component from the design images and assets
+                provided by Frontend Mentor.
+            </p>
 
-        <p class="project_description"> <b>Project Description: </b>
-        <p>This project replicates the results summary component from the design images and assets
-            provided by Frontend Mentor.
-        </p>
-
-
-
-    </section>
+        </section>
+    </div>  
+</div>
 
     <div class="content">
         <section class="specific_project_info">
@@ -41,11 +54,13 @@
             <p> Things I Learned: </p>
             <ul>
                 <li>How to add a gradient background to multiple divs</li>
-                <li>How to set variables in CSS and use them</li>
+                <li>How to set variables in CSS and use them throughout the styling process</li>
             </ul>
             <p> Things I Enjoyed: </p>
             <ul>
+                <li>Starting the design mobile-first</li>
                 <li>Getting the look to be as close as possible to the original source material</li>
+                <li>Learning how to make the components scale properly with respect to screen-size</li>
 
             </ul>
             <p> Things I'd do Differently: </p>
@@ -53,23 +68,17 @@
 
             </ul>
             <p> Challenges that were Faced: </p>
+
             <ul>
 
 
             </ul>
 
         </section>
-        <section class="specific_project_content">
-            <!--
-            <img id="main_photo" src="../images/results_summary/main-mobile.PNG" style="height: 75%; width: 75%;"
-                alt="image of the main screen of the program">
-            <p id="main_photo_caption"> </p>
-            -->
-            <a href="/FrontendMentor_resultsSummaryComponent/"> <button onclick=""> Try Me! </button> </a>
-
-        </section>
+       
 
     </div>
+</div>
     <div style="height: 150px"></div>
 
 </body>

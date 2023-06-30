@@ -162,8 +162,8 @@ img{
   }
   
   img{
-    height: 30vw;
-    width: 25vw;
+    height: 27vw;
+    width: 22vw;
   }
 
   .gridContainer{
@@ -176,8 +176,7 @@ img{
     margin: 0;
   }
   
-  .specific_project_content{}
-
+ 
   .gridContainer .column:nth-of-type(1) {
     order: 2;
   }
@@ -191,5 +190,12 @@ img{
   .button:hover{
     background:linear-gradient(var(--light-purple-trans), var(--pale-blue-trans));
   }
+
+  .specific_project_info{
+    margin: auto;
+    margin-top: 4vh;
+  }
+
+ 
 
 }
