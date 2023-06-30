@@ -1,24 +1,58 @@
-body {
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  font-size: 18px;
-  line-height: 27px;
+:root {
+  /* Base colours */
+  --dark-blue: rgb(0, 28, 48);
+  --medium-blue: rgb(23, 107, 135);
+  --light-blue: hsl(176, 50%, 60%);
+  --highlight-blue: rgb(218, 255, 251);
+
+  
+  --light-purple: hsl(254, 45%, 78%);
+  --pale-blue: hsl(226, 34%, 75%);
+  
+  --light-purple-trans: hsla(254, 45%, 78%, 50%);
+  --pale-blue-trans: hsla(226, 34%, 75%, 50%);
+  --light-blue-trans: hsla(176, 50%, 60%, 30%);
+
+  /* Font */
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  display: block;
+  background-color:rgb(201, 205, 207);
+  /*
+  background: linear-gradient(var(--light-purple), var(--pale-blue-trans));
+ */
 }
 
-
-.header {
-  display: flex;
+body {
   width: 100%;
+  margin: auto;
+  padding: 0;
+  font-size: 4vw;
+}
+
+.container{
+  width: 90%;
+  margin: auto;
+}
+
+.header{
+  display: inline-block;
+  margin-left: -40vw;
 }
  
+.header > *{
+  margin: 0 1em;
+}
+
 .home_icon{
-  margin-right: 0.5%;
-  width: 20px;
-  height: 30px;
-  vertical-align: text-bottom;
+  margin-right: 2%;
+  width: 5vw;
+  height: 5vw;
 }
 
 .header a{
   width: 100%;
+  font-size: 5vw;
 }
 
 .header a:link{
@@ -45,115 +79,101 @@ body {
   color:rgb(0, 0, 0);
 }
 
-
-.basic_project_info{
-  width: 75%;
-  border-style: solid;
-  border-width: 20px;
-  border-radius: 1em;
-  border-color: lightgray;
-  background-color:rgb(238, 237, 237);
-  margin-top: 5%;
-  margin-bottom: 5%;
-  padding-top: 0%;
-  padding-bottom: 3%;
-  padding-left: 2%;
-  padding-right: 2%;
+.header p{
+  display: inline-block;
 }
 
-.basic_project_info a:link, a:visited{
-    color: blue;
+
+h1 {
+  font-size: 10vw;
+}
+
+.basic_project_info{
+  
+  background-color: rgba(255, 255, 255, 0.65);
+  text-align: start;
+  padding: 1vw 2vw;
+  margin: 4vw 2vw;
+  line-height: 4vh;
+  border-radius: 1em;;
+}
+
+.basic_project_info h2{
+  text-align: center;
+}
+
+.specific_project_content a{
+  text-decoration: none;
+}
+
+
+img{
+  height: 90vw;
+  width: 75vw;
+}
+
+.button{
+  width: 40vw;
+  height: 7vw;
+  border: none;
+  border-radius: 1em;
+  
+  background: linear-gradient(var(--light-purple), var(--pale-blue));
 }
 
 .specific_project_info{
-  width: 50%;
-  background-color:rgb(238, 237, 237);
-  margin-bottom: auto;
-  padding-top: 1%;
-  padding-bottom: 7%;
-  padding-left: 2%;
-  padding-right: 2%;
-  border-radius: 2em;
-  border-bottom-right-radius: 2em;
-  border-style: solid;
-  border-color: lightgray;
-  border-width: 30px;
+  background-color: rgba(255, 255, 255, 0.65);
+  text-align: start;
+  padding: 1vw 2vw;
+  margin: 2vw;
+  line-height: 4vh;
+  border-radius: 1em;;
 }
 
-.specific_project_info h2 {
-  position: relative;
-  margin-bottom: 5%;
+.specific_project_info p{
+  font-weight: bold;
+}
+
+@media (width >= 700px) {
+  body{
+    font-size: 1.5vw;
+   
+  }
+  .header{
+    display: inline-block;
+    margin-left: -80vw;
+  }
+ 
+  .home_icon{
+    margin-right: 0.5%;
+    margin-top: 1%;
+    width: 2vw;
+    height: 2vw;
+    vertical-align: text-bottom;
+  }
+
+  .header a{
+    font-size: 1.5vw;
+    vertical-align: center;
+  }
+
+  h1 {
+    font-size: 3vw;
+  }
   
-}
+  img{
+    height: 30vw;
+    width: 25vw;
+  }
 
-.specific_project_info ul{
-  overflow-wrap: break-word;
-  position: relative;
-}
+  .button{
+    width: 20vw;
+    height: 3vw;
+    cursor: pointer;
+  }
 
-.specific_project_info p {
-  position: relative;
-  padding-top: 1%;
-  font-weight:bold;
-  margin-left: 3%;
-}
+  .button:hover{
+    background:linear-gradient(var(--light-purple-trans), var(--pale-blue-trans));
+  }
 
-.specific_project_info p, li{
-  position: relative;
-  white-space: normal;
-  word-wrap: break-word;
-}
-
-.content {
-  display: inline-flex;
-  width: 95%;
-}
-
-.specific_project_content{
-  position: relative;
-  display: block;
-  width: 33%;
-}
-
-#main_photo{
-  position: relative;
-  height: 50%;
-  width: 120%;
-  margin-left: 10%;
-  margin-top: 35%;
-  
-}
-
-.project_photos {
-  width: 500px;
-}
-
-.project_photos img {
-  width: 500px;
-  height: 350px;
-}
-
-#main_photo_caption{
-  margin-left: 50%;
-}
-
-button {
-  margin-left: 60%;
-  margin-top: 10%;
-  width: 100px;
-  height: 100px;
-  font-size: 25px;
-  border-radius: 20%;
-  border-style: solid;
-  border-width: 3px;
-  border-color: rgb(184, 184, 184);
-  background-color: lightgray;
-}
-
-button:hover{
-  cursor: pointer;
-  border-width: 3px;
-  border-color: rgb(216, 216, 216);
-  background-color: rgb(231, 231, 231);
-  border-style: solid;
 }
