@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,29 +8,44 @@
     <link rel="stylesheet" href="/CSS/projectInfo.css">
     <title>jvlazar | Fylo Landing Page</title>
 </head>
+
 <body>
+    <div class="container">
     <div class="header">
-        <a href="../index.html"> <img class="home_icon" src="../images/icons/home.svg"> Jessica Lazar || jvlazar</a>  
+        <a href="../index.html"> <img class="home_icon" src="../images/icons/home.svg"> <p>Jessica Lazar || jvlazar</p></a>
     </div>
 
-    <h1>Fylo Landing Page (Dark Mode)</h1>    
-
-    <section class="basic_project_info">
-        <h2>Project Information</h2>
+    <h1>Fylo Landing Page</h1>
+    <div class="gridContainer">
+    <div class="column">
+        <section class="specific_project_content">
+            <a href="/fylo_landing_page_dark_theme/">
+                <img id="main_photo" src="../images/fylo/preview.png">
+                <p id="main_photo_caption">Fylo Landing Page </p>
+            </a>
+            <a href="/fylo_landing_page_dark_theme/"> <button class="button tryMe" onclick=""> Try Me! </button> </a>
+            
+            <a href="https://github.com/jvlazar/fylo_landing_page_dark_theme"> <button class="button code" onclick="">Code </button> </a>
+        </section>
+    </div>
+    <div class="column">
+        <section class="basic_project_info">
+            <h2>Project Information</h2>
         <p> <b>Project Title: </b>Fylo Landing Page</p>
         <p> <b>Project Languages: </b>HTML, CSS</p>
-        <p> <b>Project Referenced From </b>:
+        <p> <b>Project Referenced From: </b>
         <a href="https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd"> 
-             Frontend Mentor - Fylo Landing Page (Click to visit page)
+             Frontend Mentor - Fylo Landing Page
         </a>      
 
         <p class="project_description"> <b>Project Description: </b><p>This project replicates the landing page
             from the design images and assets provided by Frontend Mentor.</p>
         </p>
-        
-    </section>
+        </section>
+    </div>  
+</div>
 
-    <div class="content"> 
+    <div class="content">
         <section class="specific_project_info">
             <h2> Project Specifics</h2>
             
@@ -58,19 +74,14 @@
                         the <i>background: linear-gradient</i> property solved this challenge) </li>
                 
                 </ul>
-        
-        </section>
-        <section class="specific_project_content">
-            <img src="../images/fylo/main.png" style="display: flex; margin-left: 35%; margin-top: 2em;
-             width: 70%; height: 80%;">
-            <p id="main_photo_caption"></p>
-            <a href="/fylo_landing_page_dark_theme/"> <button onclick=""> Visit Me! </button>  </a>
-            
 
         </section>
-        
+       
+
     </div>
+</div>
     <div style="height: 150px"></div>
 
 </body>
+
 </html>

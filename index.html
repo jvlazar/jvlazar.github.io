@@ -5,121 +5,209 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jvlazar | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/index.css">
-    </style>
+   
     <script src="JS/index.js"> </script>
+    <title>jvlazar | Home</title>
 </head>
 
 
 <body>
 
-    <!--Header. Will uncomment it once I figure out what to do with it
-        <div class="header">
-            <p> jvlazar</p>
-            <div class="other_components">
-                <p> About</p>
-                <p> Skills</p>
-                <p> Contact</p>
-            </div>
-        </div>
-        -->
+
 
     <div class="banner">
+        
         <p class="name"> Jessica Lazar</p>
         <p class="username"> jvlazar</p>
+        <!--TAB types-->
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'projects_tab')" id="projects_button">Projects</button>
+            <button id="about_button" class="tablinks" onclick="openTab(event, 'about_tab')">About</button>
+            <button id="resume_button" class="tablinks" onclick="openTab(event, 'resume_tab')">Resume</button>
+            <button id="contact_button" class="tablinks" onclick="openTab(event, 'contact_tab')">Links</button>
+        </div>
+
+
+   
     </div>
 
-
+    <!--
     <p>-----------------------------------------------------------</p>
     <p><b> PLEASE NOTE, THIS SITE IS STILL A WORK IN PROGRESS </b></p>
     <p>-----------------------------------------------------------</p>
 
     <section class="description">
-        <p class="about">About Me</p>
-
-        <p class="text">Hi there, welcome to my site! I'm currently in the process of developing my programming skills
-            to
-            eventually work in the tech field as a programmer, and this site serves as my portfolio. I realized at the
-            end
-            of my schooling that I didn't have enough projects to showcase to people, and decided to change that by
-            creating this website to house all the projects I worked on, and to encourage me to work on projects
-            to build up my portfolio.
-        </p>
-
-        <p class="text">I graduated from university with a Bachelor in Health Sciences in 2023, majoring
-            in Bioinformatics. Throughout my degree I focused mostly on the programming aspect of my degree (rather
-            than the biology aspect) and realized that programming is something that I can do and that
-            I really like doing! Although I'm ready to get my hands dirty with any aspect of programming,
-            my overarching goal is to create something that people can use, and especially something
-            that can help people.
-        </p>
-
-        <p class="text">Below, you'll find links to projects that I've worked on/am currently working on. These
-            projects fall under one of three categories; Personal, School, and Online projects. Once you click
-            on a link, you'll be taken to a page that provides more details about the project, and if appropriate,
-            you can even interact with it!
-        </p>
+    
     </section>
+    -->
+       
 
-
-
-    <!--TAB types-->
-    <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'projects_tab')" id="projects_button">Projects</button>
-        <button id="skills_button" class="tablinks" onclick="openTab(event, 'skills_tab')">Skills</button>
-        <button id="resume_button" class="tablinks" onclick="openTab(event, 'resume_tab')">Resume</button>
-        <button id="contact_button" class="tablinks" onclick="openTab(event, 'contact_tab')">Contact/Links</button>
+     <!--Tab Content-->
+     <div id="projects_tab" class="tabcontent">
+        <h3 class="header"> Projects</h3>
+        <section class="projects">
+         
+        <div class="container">
+            <a href="./HTML/wordlereplica.html">
+            <div class="card wordle"> </div>
+            <div class="cardTitle"> 
+                <div class="summaryTitle">
+                    <p>
+                    Wordle Replica
+                    </p>
+                    <p> ------ </p>
+                    <p>Personal Project</p>
+                </div>
+            </div>
+        </a>
+        <h5 class="title">Wordle Replica</h5>
+        <h5 class="title">Personal Project</h5>
     </div>
 
 
-    <!--Tab Content-->
-    <div id="projects_tab" class="tabcontent">
-        <p class="title"> Projects</p>
-        <section class="projects">
-            <div class="personal">
-                <div class="inner">
-                    <p>Personal Projects</p>
-                    <p class="date"> 2023 </p>
-                    <a href="/HTML/wordlereplica.html"> Wordle Replica</a>
+    
+        <div class="container">
+        <a href="./HTML/results_summary_component.html">
+            <div class="card results"> </div>
+            <div class="cardTitle"> 
+                <div class="summaryTitle">
+                    <p>
+                    Results Summary Component
+                    </p>
+                    <p> ------ </p>
+                    <p>Frontend Mentor Project</p>
                 </div>
             </div>
-            <div class="school">
-                <div class="inner">
-                    <p>School Projects</p>
-                    <p class="date"> 2023 </p>
-                    <a href="/HTML/librarysystem.html">Library System</a>
-                    <p class="date"> 2021 </p>
-                    <a href="/HTML/mutation.html">Mutation Inducer</a>
+            
+            <h5 class="title">Results Summary Component </h5> 
+            <h5 class="title"> Frontend Mentor</h5>
+        </a>
+    
+    </div>
+
+    
+        <div class="container">
+            <a href="./HTML/fylo.html">
+                <div class="card fylo"></div>
+                <div class="cardTitle"> 
+                    <div class="summaryTitle">
+                        <p>
+                        Fylo Landing Page
+                        </p>
+                        <p> ------ </p>
+                        <p>Frontend Mentor Project</p>
+                    </div>
                 </div>
-            </div>
-            <div class="frontend">
-                <div class="inner">
-                    <p>Online Projects</p>
-                    <p class="date"> 2023 </p>
-                    <a href="/HTML/results_summary_component.html">Results Summary Component - Frontend Mentor</a>
-                    <a href="/HTML/fylo.html"> Fylo Landing Page - Frontend Mentor</a>
-                    <a href="/HTML/agecalculator.html"> Age Calculator - Frontend Mentor</a>
+                <h5 class="title">Fylo Landing Page </h5>
+                <h5 class="title"> Frontend Mentor</h5>
+            </a>
+        </div>
+
+
+    
+        <div class="container">
+            <a href="./HTML/agecalculator.html">
+                <div class="card ageCalculator"></div>
+                <div class="cardTitle"> 
+                    <div class="summaryTitle light">
+                        <p>
+                        Age Calculator
+                        </p>
+                        <p> ------ </p>
+                        <p>Frontend Mentor Project</p>
+                    </div>
                 </div>
-            </div>
+                <h5 class="title">Age Calculator</h5>
+                <h5 class="title">Frontend Mentor</h5>
+            </a>
+        </div>
+    
+
+    
+        <div class="container">
+            <a href="./HTML/librarysystem.html">
+                <div class="card librarySystem"></div>
+                <div class="cardTitle"> 
+                    <div class="summaryTitle light">
+                        <p>
+                        Library System
+                        </p>
+                        <p> ------ </p>
+                        <p>School Project</p>
+                    </div>
+                </div>
+                <h5 class="title">Library System</h5>
+                <h5 class="title">School Project</h5>
+            </a>
+        </div>
         </section>
     </div>
-    <div id="skills_tab" class="tabcontent">
-        <p class="title">Skills</p>
-        <section class="skills">
-            <p> WIP</p>
+    <div id="about_tab" class="tabcontent">
+        <p class="header">About Me</p>
+        <section class="about">
+            <p> Hi there, welcome to my portfolio! 
+                I realized at the end of my schooling that I didn't have enough projects to showcase to employers, 
+                and decided to change that by creating this website to house all the projects I worked on, and to 
+                encourage me to start new ones to build up my portfolio and improve my skills.
+            </p>
+            <p>
+                I graduated from university with a Bachelor in Health Sciences in 2023, 
+                majoring in Bioinformatics. Throughout my degree I focused mostly on the programming aspect of 
+                my field (rather than the biology aspect) and realized that programming is something that I can 
+                do and that I really like doing! Although I'm ready to get my hands dirty with any aspect of 
+                programming, my overarching goal is to create something that people can use, and especially something 
+                that can help people.
+            </p>
+            <p>
+                I have also done art as a hobby for the past 10+ years, and while I'm not a graphic designer
+                I highly enjoy the process of working on front end projects, and it's a perfect mix for me of
+                creativity and logic. As such, I hope to work in front end development in my career.
+            </p>
         </section>
     </div>
     <div id="resume_tab" class="tabcontent">
-        <p class="title">Resume</p>
+        <p class="header">Resume</p>
+        <h1>------- WIP -------</h1>
+        <h3>Education</h3>
         <section class="resume">
-            <p> WIP</p>
+            <div class="school">
+                <p> <b>University of Calgary - Bachelor of Health Sciences: Bioinformatics</b>
+                    <ul>
+                        <li>2019-2023</li>
+                        <li>Graduated First Class</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="school">
+                <p> <b>Langara College - Associate Degree of Health Sciences: Science</b>
+                    <ul >
+                        <li>2016-2019</li>
+                        <li>Graduated With Distinction</li>
+                        <li>Dean's Honour Role (Summer 2018)</li>
+                    </ul>
+                </p>
+            </div>
+            <br>
+            <br>
+          
         </section>
     </div>
     <div id="contact_tab" class="tabcontent">
-        <p class="title">Contact / Links</p>
+        <p class="header">Contact / Links</p>
+        <h1>------- WIP -------</h1>
         <section class="contacts">
-            <p>WIP</p>
+            <p>Email: jvlazar@gmail.com</p>
+            <p> <a href="https://github.com/jvlazar">Github -- jvlazar</a></p>
+            <p> <a href="https://leetcode.com/jvlazar/">LeetCode -- jvlazar</a></p>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
         </section>
     </div>
 

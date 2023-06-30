@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,29 +8,49 @@
     <link rel="stylesheet" href="/CSS/projectInfo.css">
     <title>jvlazar | Age Calculator</title>
 </head>
+
 <body>
+    <div class="container">
     <div class="header">
-        <a href="../index.html"> <img class="home_icon" src="../images/icons/home.svg"> Jessica Lazar || jvlazar</a>  
+        <a href="../index.html"> <img class="home_icon" src="../images/icons/home.svg"> <p>Jessica Lazar || jvlazar</p></a>
     </div>
 
-    <h1>Age Calculator</h1>    
+    <h1>Age Calculator</h1>
+    <div class="gridContainer">
+    <div class="column">
+        <section class="specific_project_content">
+            <a href="/age_calculator_JS/">
+                <img id="main_photo" src="../images/age_calculator/preview.PNG">
+                <p id="main_photo_caption">Age Calculator </p>
+            </a>
+            <a href="/age_calculator_JS/"> <button class="button tryMe" onclick=""> Try Me! </button> </a>
+            
+            <a href="https://github.com/jvlazar/age_calculator_JS"> <button class="button code" onclick="">Code </button> </a>
+        </section>
+    </div>
+    <div class="column">
+        <section class="basic_project_info">
+            <h2>Project Information</h2>
+            <p> <b>Project Title: </b>Age Calculator</p>
+            <p> <b>Project Languages: </b>HTML, CSS, JavaScript (Vanilla)</p>
+            <p> <b>Project Referenced From: </b>
+            <a href="https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q/hub"> 
+                 Frontend Mentor - Age Calculator
+            </a>      
+    
+            <p class="project_description"> <b>Project Description: </b><p>This project calculates and displays the user's age after inputing their birth 
+                day, month, and year. Results are displayed in years, months, and days.</p>
+                <p>
+                    This project replicates the age calculator project from the design 
+                    images and assets provided by Frontend Mentor.
+                </p>
+            </p>
+            
+        </section>
+    </div>  
+</div>
 
-    <section class="basic_project_info">
-        <h2>Project Information</h2>
-        <p> <b>Project Title: </b>Age Calculator</p>
-        <p> <b>Project Languages: </b>HTML, CSS, JavaScript</p>
-        <p> <b>Project Referenced From </b>:
-        <a href="https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q/hub"> 
-             Frontend Mentor - Age Calculator (Click to visit page)
-        </a>      
-
-        <p class="project_description"> <b>Project Description: </b><p>This project calculates and displays the user's age after inputing their birth 
-            day, month, and year. Results are displayed in years, months, and days.</p>
-        </p>
-        
-    </section>
-
-    <div class="content"> 
+    <div class="content">
         <section class="specific_project_info">
             <h2> Project Specifics</h2>
             
@@ -62,19 +83,14 @@
                         (and having to rewrite code multiple times as a result) </li>
                 
                 </ul>
-        
-        </section>
-        <section class="specific_project_content">
-            <img id="main_photo" src="../images/age_calculator/photo1.PNG">
-            <p id="main_photo_caption">Main Page for Age Calculator</p>
-            <a href="/age_calculator_JS/"> <button onclick=""> Try Me! </button>  </a>
-            
 
         </section>
-        
+       
+
     </div>
+</div>
     <div style="height: 150px"></div>
 
-   
 </body>
+
 </html>
