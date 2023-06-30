@@ -290,6 +290,10 @@ body{
     visibility: hidden;
   }
 
+  .about{
+    width: 80%;
+    margin: auto;
+  }
 
   .about p{
     margin: 2vw 2vw;
