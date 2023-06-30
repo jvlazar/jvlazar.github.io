@@ -166,6 +166,22 @@ img{
     width: 25vw;
   }
 
+  .gridContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
+
+  .basic_project_info{
+    margin: 0;
+  }
+  
+  .specific_project_content{}
+
+  .gridContainer .column:nth-of-type(1) {
+    order: 2;
+  }
+
   .button{
     width: 20vw;
     height: 3vw;
