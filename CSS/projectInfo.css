@@ -17,7 +17,7 @@
   font-family: 'Inter', sans-serif;
   text-align: center;
   display: block;
-  background-color:rgb(201, 205, 207);
+  background: linear-gradient(var(--pale-blue-trans), var(--light-purple-trans));
   /*
   background: linear-gradient(var(--light-purple), var(--pale-blue-trans));
  */

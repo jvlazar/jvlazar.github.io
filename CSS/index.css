@@ -1,18 +1,23 @@
 :root {
   /* Base colours */
-  --dark-blue: rgb(0, 28, 48);
+  --dark-blue: rgb(26, 68, 97);
   --medium-blue: rgb(23, 107, 135);
   --light-blue: hsl(176, 50%, 60%);
   --highlight-blue: rgb(218, 255, 251);
 
+  --light-purple: hsl(254, 45%, 78%);
+  --pale-blue: hsl(226, 34%, 75%);
+  
+  --light-purple-trans: hsla(254, 45%, 78%, 50%);
+  --pale-blue-trans: hsla(226, 34%, 75%, 50%);
   --light-blue-trans: hsla(176, 50%, 60%, 30%);
-
+  --medium-blue-trans: hsla(195, 71%, 31%, 50%);
 
   /* Font */
   font-family: 'Inter', sans-serif;
   text-align: center;
   display: inline-block;
-  background-color: rgb(206, 210, 209);
+  background: linear-gradient(var(--medium-blue-trans), var(--light-purple));
  
 }
 
@@ -96,7 +101,6 @@ body{
 .card{
   height: 80vw;
   width: 60vw;
-  background-color: red;
   border-color: var(--dark-blue);
   border-width: 5%;
   border-style: solid;
@@ -139,8 +143,21 @@ body{
   background-size: cover;
 }
 
+.about{
+  width: 80%;
+  margin: auto;
+}
 
-
+.about p{
+  margin: 6vw 2vw;
+  line-height: 4vh;
+}
+.school{
+  margin-top: 3vw;
+}
+.school ul{
+  list-style: none;
+}
 
 
 @media (width >= 700px){
@@ -271,6 +288,17 @@ body{
   .projects .title{
     font-size: 1.25vw;
     visibility: hidden;
+  }
+
+
+  .about p{
+    margin: 2vw 2vw;
+    line-height: 4vh;
+  }
+
+  .contacts{
+    font-size: 1.25vw;
+    height: 100%;
   }
 
 
