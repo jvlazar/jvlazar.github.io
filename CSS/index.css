@@ -17,7 +17,7 @@
   font-family: 'Inter', sans-serif;
   text-align: center;
   display: inline-block;
-  background: linear-gradient(var(--medium-blue-trans), var(--light-purple));
+  
  
 }
 
@@ -25,6 +25,7 @@ body{
   max-width: 100%;
   margin: 0;
   padding: 0;
+  background: linear-gradient(var(--medium-blue-trans), var(--light-purple));
 }
 
 
@@ -165,7 +166,22 @@ body{
   margin: auto;
 }
 
+.footer{
+  
+  margin: 2vh 0;
+  padding-bottom: 2vh;
+}
 
+.contacts img{
+  width: 5vw;
+  height: 5vw;
+  margin-right: 1%;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
 
 
 
@@ -313,6 +329,13 @@ body{
     font-size: 1.25vw;
     height: 100%;
   }
+
+
+.contacts img{
+  width: 3vw;
+  height: 3vw;
+  margin-right: 1%;
+}
 
 
   @keyframes appear{

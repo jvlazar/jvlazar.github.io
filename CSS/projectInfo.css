@@ -57,6 +57,7 @@ body {
 
 .header a:link{
   text-decoration: black;
+  text-decoration: none;
   }
 
 .header a:visited{
@@ -136,8 +137,8 @@ img{
 @media (width >= 700px) {
   body{
     font-size: 1.5vw;
-   
   }
+
   .header{
     display: flex;
     margin-left: -80vw;
