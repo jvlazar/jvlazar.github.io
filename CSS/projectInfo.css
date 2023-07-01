@@ -36,8 +36,8 @@ body {
 }
 
 .header{
-  display: inline-block;
-  margin-left: -40vw;
+  display: flex;
+  margin-left: -30vw;
 }
  
 .header > *{
@@ -139,7 +139,7 @@ img{
    
   }
   .header{
-    display: inline-block;
+    display: flex;
     margin-left: -80vw;
   }
  
