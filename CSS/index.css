@@ -58,7 +58,7 @@ body{
   border-style: solid;
   border-color: transparent;
   cursor: pointer;
-  font-size: 5vw;
+  font-size: 4vw;
   color: white;
 }
 
@@ -153,11 +153,20 @@ body{
   line-height: 4vh;
 }
 .school{
-  margin-top: 3vw;
+  margin-top: 5vh;
 }
-.school ul{
-  list-style: none;
+
+.school p{
+  margin-top: -1.5vh;
 }
+
+.resume{
+  width: 80%;
+  margin: auto;
+}
+
+
+
 
 
 @media (width >= 700px){
