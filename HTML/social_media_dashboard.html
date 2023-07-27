@@ -15,13 +15,13 @@
         <a href="../index.html"> <img class="home_icon" src="../images/icons/home.svg"> <p>Jessica Lazar || jvlazar</p></a>
     </div>
 
-    <h1>Social Media Dashboard - Dark Mode (WIP as of July 27th)</h1>
+    <h1>Social Media Dashboard - Theme Switcher (WIP as of July 27th)</h1>
     <div class="gridContainer">
     <div class="column">
         <section class="specific_project_content">
             <a href="/FrontendMentor_social_media_dashboard/">
                 <img id="main_photo" class="main_photo results" src="../images/social_media_dashboard/preview.png">
-                <p id="main_photo_caption">Social Media Dashboard - Dark Mode </p>
+                <p id="main_photo_caption">Social Media Dashboard - Theme Switcher </p>
             </a>
             <a href="/FrontendMentor_social_media_dashboard/"> <button class="button tryMe" onclick=""> Try Me! </button> </a>
             
@@ -31,17 +31,19 @@
     <div class="column">
         <section class="basic_project_info">
             <h2>Project Information</h2>
-            <p> <b>Project Title: </b> Social Media Dashboard - Dark Mode</p>
-            <p> <b>Project Languages: </b>HTML, CSS</p>
+            <p> <b>Project Title: </b> Social Media Dashboard - Theme Switcher</p>
+            <p> <b>Project Languages: </b>HTML, CSS, JavaScript (React)</p>
+            <p> <b>Additional Tools Used: </b>React</p>
             <p> <b>Project Referenced From: </b>
                 <a href="https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H">
-                    Frontend Mentor - Social Media Dashboard - Dark Mode
+                    Frontend Mentor - Social Media Dashboard - Theme Switcher
                 </a>
     
             <p class="project_description"> <b>Project Description: </b>
-            <p>This project replicates the Social Media Dashboard - Dark Mode from the design images and assets
+            <p>This project replicates the Social Media Dashboard - Theme Switcher from the design images and assets
                 provided by Frontend Mentor.
             </p>
+            <p>Additionally, I added a personal goal of learning and using React to create the UI.</p>
 
         </section>
     </div>  
@@ -53,20 +55,42 @@
 
             <p> Things I Learned: </p>
             <ul>
-               
+               <li>Basics of React 
+                    <ul>
+                        <li>General structure of components</li>
+                        <li>Using Hooks</li>
+                        <li>Passing variables to components as props</li>
+                        <li>Accessing props in child components</li>
+                        <li>Passing values up from child component to parent component</li>
+                        <li>Utilizing modules for CSS</li>
+                    </ul>
+                </li>
+                <li>How to incorporate theme switcher (from light to dark mode, and vice versa)</li>
             </ul>
             <p> Things I Enjoyed: </p>
             <ul>
-                
+                <li>Learning React</li>
+                <li>Adding responsive behaviour to the website</li>
             </ul>
             <p> Things I'd do Differently: </p>
             <ul>
-
+                <li>Restructure the core data being passed in a way that I can use the map() function to create the component</li>
             </ul>
             <p> Challenges that were Faced: </p>
 
             <ul>
+                <li>Getting the colours of certain text to change depending on positive or negative value
+                    <ul>
+                        <li>How I solved it: I created a component that will evaluate the string,
+                            and if the string contains "▲", turn the text green, else turn it red. Adding this function
+                            as a separate component, as opposed to simply having it as a function in a component,
+                            allowed me to call it from sibling components, as well as reduce the number of times the same
+                            code was repeated.
+                        </li>
+                    </ul>
+                </li>
 
+                
 
             </ul>
 
