@@ -37,13 +37,11 @@ body {
 }
 
 .container{
-  background-color: blue;
   width: 90%;
   margin: auto;
 }
 
 .header{
-  background-color: red;
   display: flex;
   margin: auto;
   

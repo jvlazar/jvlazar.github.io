@@ -72,7 +72,7 @@ body{
 }
 
 .username{
-  margin-top: -10%;
+  margin-top: -2%;
   font-size: 6vw;
 }
 
@@ -127,7 +127,8 @@ body{
 .card{
   height: 80vw;
   width: 60vw;
-  border-color: var(--dark-blue);
+  border-color: transparent;
+  /* border-color: var(--dark-blue); */
   border-width: 5%;
   border-style: solid;
   border-radius: 1em;
@@ -248,7 +249,7 @@ a {
     width: 15vw;
     height: 15vw;
     border-radius: 10em;
-    background: linear-gradient(transparent, rgb(255, 250, 238), transparent);
+    background: linear-gradient(transparent, rgb(255, 250, 238));
     display: flex;
     align-items: center;
     justify-content: center;
