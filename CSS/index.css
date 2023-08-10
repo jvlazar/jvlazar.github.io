@@ -248,7 +248,7 @@ a {
     width: 15vw;
     height: 15vw;
     border-radius: 10em;
-    background: linear-gradient(transparent, rgb(255, 250, 238));
+    background: linear-gradient(transparent, rgb(255, 250, 238), transparent);
     display: flex;
     align-items: center;
     justify-content: center;
