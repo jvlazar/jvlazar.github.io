@@ -19,6 +19,13 @@
   text-align: center;
   display: inline-block;
   
+
+  --primary: #EADBC8;
+  --secondary: #DAC0A3;
+  --tertiary: #584733;
+  color: #251910;
+  font-weight: 500;
+  /* #d0daa3 */
  
 }
 
@@ -26,12 +33,14 @@ body{
   max-width: 100%;
   margin: 0;
   padding: 0;
-  background: linear-gradient(var(--pale-blue-trans), var(--light-purple-trans));
+  background-color: var(--primary);
+  /* background: linear-gradient(var(--pale-blue-trans), var(--light-purple-trans)); */
 }
 
 
 .banner{
-  background: linear-gradient(var(--dark-blue), var(--medium-blue));
+  background-color: var(--secondary);
+  /* background: linear-gradient(var(--dark-blue), var(--medium-blue)); */
   color: white;
   padding-top: 1vh;
   padding-bottom: 1vh;
@@ -40,11 +49,25 @@ body{
   
 }
 
-.banner p{
-  padding-top: 1vh;
+
+.icon_div{
+  margin: auto;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 10em;
+  background: linear-gradient(transparent, rgb(255, 250, 238));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon{
+  width: 20vw;
+  height: 28vw;
 }
 
 .name {
+  margin-top: 0;
   font-size: 8vw;
 }
 
@@ -56,25 +79,26 @@ body{
 .tab button{
   width: 20vw;
   height: 10vw;
+  font-weight: 800;
   background-color: transparent;
   border-style: solid;
   border-color: transparent;
   cursor: pointer;
   font-size: 4vw;
-  color: white;
+  color: var(--tertiary);
 }
 
 .tab button.active{
   width: 20vw;
   height: 10vw;
-  border-bottom-color: var(--light-blue);
-  color: var(--highlight-blue);
+  border-bottom-color: var(--primary);
+  color: white;
 }
 
 
 .tab button:hover{
-  border-bottom-color: var(--light-blue);
-  color: var(--highlight-blue);
+  border-bottom-color: var(--primary);
+  color:white;
 }
 
 .header{
@@ -194,7 +218,8 @@ a {
 @media (width >= 700px){
 
   .banner{
-    background: linear-gradient(var(--dark-blue), var(--medium-blue));
+    background-color:var(--secondary);
+    /* background: linear-gradient(var(--dark-blue), var(--medium-blue)); */
     color: white;
     width: auto;
     border-bottom-left-radius: 1em;
@@ -203,11 +228,36 @@ a {
    
   }
 
+  .banner_info{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .banner_info .column:nth-child(1){
+    display: flex;
+    margin-left: auto;
+  }
+
+  .icon_div{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 10em;
+    background: linear-gradient(transparent, rgb(255, 250, 238));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon{
+    width: 10vw;
+    height: 14vw;
+  }
+
+
   .name {
     font-size: clamp(40px, 4vw + 1rem, 60px);
     margin: 0 auto;
     margin-top: 3vw;
-  
   }
   
   .username{
@@ -249,16 +299,12 @@ a {
     width: 15vw;
     height: 4vw;
     font-size: 2.25vw;
-    border-bottom-color: var(--light-blue);
-    color: var(--highlight-blue);
   }
 
   .tab button.active{
     width: 15vw;
     height: 4vw;
     font-size: 2.25vw;
-    border-bottom-color: var(--light-blue);
-    color: var(--highlight-blue);
   }
 
   .projects{
@@ -330,12 +376,36 @@ a {
   .about{
     width: 80%;
     margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    text-align: left;
   }
+
+  .about .column{
+    
+    /* background-color: blue; */
+  }
+
+  .about .column:nth-child(1){
+    /* background-color: red; */
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about_icon{
+    min-width: 25vw;
+    max-width: 50vw;
+    height: 43vw;
+  }
+
 
   .about p{
     margin: 2vw 2vw;
     line-height: 4vh;
   }
+
 
   .contacts{
     font-size: 1.25vw;
