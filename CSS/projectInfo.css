@@ -109,9 +109,25 @@ h1 {
 
 .specific_project_content a{
   text-decoration: none;
+  color: blue'
 }
 
 
+a:link{
+  color:blue;
+}
+a:visited{
+  color:blue;
+}
+a:hover{
+  color:blue;
+}
+a:focus{
+  color:blue;
+}
+a:active{
+  color:blue;
+}
 img{
   height: 90vw;
   width: 75vw;
@@ -136,6 +152,7 @@ img{
   line-height: 4vh;
   border-radius: 1em;;
 }
+
 
 .specific_project_info p{
   font-weight: bold;
@@ -203,6 +220,20 @@ img{
     margin-top: 4vh;
   }
 
- 
+  a:link{
+    color:blue;
+  }
+  a:visited{
+    color:blue;
+  }
+  a:hover{
+    color:blue;
+  }
+  a:focus{
+    color:blue;
+  }
+  a:active{
+    color:blue;
+  }
 
 }
