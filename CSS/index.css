@@ -288,16 +288,26 @@ a {
   }
 
   .tab{
-    height: 10vh;
-    margin-top: 1vw;
-    padding-top: 1vw;
+    display: flex;
+    margin: auto;
+    /* border: 3px solid black; */
+    height: 10vw;
+    max-width: 1200px;
+    margin-top: 2vw;
+    /* padding-top: 1vw; */
+    justify-content: center;
+    align-items: center;
   }
 
+
+
   .tab button{
+    /* border: 3px solid red; */
     margin: 0 1em;
+    margin-top: 3vw;
     font-family:'Courier New', Courier, monospace;
-    margin-bottom: 2em;
-    width: 10vw;
+    /* margin-bottom: 2em; */
+    width: 15vw;
     height: 3vw;
     cursor: pointer;
     font-size: clamp(20px, 2vw, 30px);
@@ -309,15 +319,16 @@ a {
   }
 
   .tab button:hover{
-    width: 15vw;
-    height: 4vw;
-    font-size: 2.25vw;
+    width: 20vw;
+    height: 3vw;
+    font-size: clamp(12px, 3vw, 32px);
   }
 
   .tab button.active{
-    width: 15vw;
-    height: 4vw;
-    font-size: 2.25vw;
+    width: 20vw;
+    height: 3vw;
+    padding-bottom: -10em;
+    font-size: clamp(12px, 4vw, 32px);
   }
 
   .projects{
