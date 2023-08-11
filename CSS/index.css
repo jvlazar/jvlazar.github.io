@@ -200,7 +200,14 @@ body{
 .resume{
   width: 80%;
   margin: auto;
+  /* display: flex; */
 }
+
+.resume_pdf{
+  width:75vw; 
+  height:100vw;
+}
+
 
 .footer{
   
@@ -415,6 +422,10 @@ a {
     line-height: 4vh;
   }
 
+  .resume_pdf{
+    width:520px; 
+    height:650px;
+  }
 
   .contacts{
     font-size: 1.25vw;
