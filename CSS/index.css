@@ -19,6 +19,13 @@
   text-align: center;
   display: inline-block;
   
+
+  --primary: #EADBC8;
+  --secondary: #DAC0A3;
+  --tertiary: #584733;
+  color: #251910;
+  font-weight: 500;
+  /* #d0daa3 */
  
 }
 
@@ -26,12 +33,14 @@ body{
   max-width: 100%;
   margin: 0;
   padding: 0;
-  background: linear-gradient(var(--pale-blue-trans), var(--light-purple-trans));
+  background-color: var(--primary);
+  /* background: linear-gradient(var(--pale-blue-trans), var(--light-purple-trans)); */
 }
 
 
 .banner{
-  background: linear-gradient(var(--dark-blue), var(--medium-blue));
+  background-color: var(--secondary);
+  /* background: linear-gradient(var(--dark-blue), var(--medium-blue)); */
   color: white;
   padding-top: 1vh;
   padding-bottom: 1vh;
@@ -40,41 +49,55 @@ body{
   
 }
 
-.banner p{
-  padding-top: 1vh;
+.icon_div{
+  margin: auto;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 10em;
+  background: linear-gradient(transparent, rgb(255, 250, 238));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon{
+  width: 20vw;
+  height: 28vw;
 }
 
 .name {
+  margin-top: 0;
   font-size: 8vw;
 }
 
 .username{
-  margin-top: -10%;
+  margin-top: -2%;
   font-size: 6vw;
 }
 
 .tab button{
   width: 20vw;
   height: 10vw;
+  font-weight: 800;
   background-color: transparent;
   border-style: solid;
   border-color: transparent;
   cursor: pointer;
   font-size: 4vw;
-  color: white;
+  color: var(--tertiary);
 }
 
 .tab button.active{
   width: 20vw;
   height: 10vw;
-  border-bottom-color: var(--light-blue);
-  color: var(--highlight-blue);
+  border-bottom-color: var(--primary);
+  color: white;
 }
 
 
 .tab button:hover{
-  border-bottom-color: var(--light-blue);
-  color: var(--highlight-blue);
+  border-bottom-color: var(--primary);
+  color:white;
 }
 
 .header{
@@ -103,7 +126,8 @@ body{
 .card{
   height: 80vw;
   width: 60vw;
-  border-color: var(--dark-blue);
+  border-color: transparent;
+  /* border-color: var(--dark-blue); */
   border-width: 5%;
   border-style: solid;
   border-radius: 1em;
@@ -155,6 +179,11 @@ body{
   margin: auto;
 }
 
+.about_icon{
+  width: 40vw;
+  height: 67vw;
+}
+
 .about p{
   margin: 6vw 2vw;
   line-height: 4vh;
@@ -170,7 +199,14 @@ body{
 .resume{
   width: 80%;
   margin: auto;
+  /* display: flex; */
 }
+
+.resume_pdf{
+  width:75vw; 
+  height:100vw;
+}
+
 
 .footer{
   
@@ -194,20 +230,53 @@ a {
 @media (width >= 700px){
 
   .banner{
-    background: linear-gradient(var(--dark-blue), var(--medium-blue));
+    padding-top: 5%;
+    background-color:var(--secondary);
+    /* background: linear-gradient(var(--dark-blue), var(--medium-blue)); */
     color: white;
     width: auto;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
     display: block;
-   
   }
+
+  .banner_info{
+    margin: auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .banner_info .column:nth-child(1){
+    display: flex;
+    margin-left: auto;
+  }
+
+  .icon_div{
+    width: 15vw;
+    height: 15vw;
+    max-width: 171.3px;
+    max-height: 171.3px;
+    border-radius: 10em;
+    background: linear-gradient(transparent, rgb(255, 250, 238));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon{
+    /* display: none; */
+    width: 10vw;
+    height: 14vw;
+    max-width: 109.8px;
+    max-height: 153.717px;
+  }
+
 
   .name {
     font-size: clamp(40px, 4vw + 1rem, 60px);
     margin: 0 auto;
     margin-top: 3vw;
-  
   }
   
   .username{
@@ -225,16 +294,26 @@ a {
   }
 
   .tab{
-    height: 10vh;
-    margin-top: 1vw;
-    padding-top: 1vw;
+    display: flex;
+    margin: auto;
+    /* border: 3px solid black; */
+    height: 10vw;
+    max-width: 1200px;
+    margin-top: 2vw;
+    /* padding-top: 1vw; */
+    justify-content: center;
+    align-items: center;
   }
 
+
+
   .tab button{
+    /* border: 3px solid red; */
     margin: 0 1em;
+    margin-top: 3vw;
     font-family:'Courier New', Courier, monospace;
-    margin-bottom: 2em;
-    width: 10vw;
+    /* margin-bottom: 2em; */
+    width: 15vw;
     height: 3vw;
     cursor: pointer;
     font-size: clamp(20px, 2vw, 30px);
@@ -246,25 +325,24 @@ a {
   }
 
   .tab button:hover{
-    width: 15vw;
-    height: 4vw;
-    font-size: 2.25vw;
-    border-bottom-color: var(--light-blue);
-    color: var(--highlight-blue);
+    width: 20vw;
+    height: 3vw;
+    font-size: clamp(12px, 3vw, 32px);
   }
 
   .tab button.active{
-    width: 15vw;
-    height: 4vw;
-    font-size: 2.25vw;
-    border-bottom-color: var(--light-blue);
-    color: var(--highlight-blue);
+    width: 20vw;
+    height: 3vw;
+    padding-bottom: -10em;
+    font-size: clamp(12px, 4vw, 32px);
   }
 
   .projects{
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
+    max-width: 1200px;
   }
 
   .container {
@@ -272,6 +350,8 @@ a {
     margin: 5vw 0;
     height: 25vw;
     width: 20vw;
+    max-width: 300px;
+    max-height: 367px;
     border-width: 5%;
     border-style: none;
   }
@@ -281,6 +361,8 @@ a {
     position: absolute;
     height: 25vw;
     width: 20vw;
+    max-width: 300px;
+    max-height: 367px;
     overflow: hidden;
     margin: 0;
     border:none;
@@ -296,6 +378,8 @@ a {
     font-size: 2vw;
     height: 25vw;
     width: 20vw;
+    max-width: 300px;
+    max-height: 367px;
     opacity: 0;
   }
 
@@ -328,13 +412,47 @@ a {
   }
 
   .about{
-    width: 80%;
+    width: 100%;
     margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    text-align: left;
+    column-gap: 1em;
   }
+
+
+  .about .column:nth-child(1){
+    /* background-color: red; */
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .about .column:nth-child(2){
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 2em;
+  
+  }
+
+  .about_icon{
+    width: 25vw;
+    height: 43vw;
+    min-width: 320px;
+    min-height: 550px;
+  }
+
 
   .about p{
     margin: 2vw 2vw;
-    line-height: 4vh;
+    line-height: 3vw;
+    font-size: clamp(15px, 2.25vw, 24px);
+    /* line-height: 4vw; */
+  }
+
+  .resume_pdf{
+    width: 50vw; 
+    height:65vw;
   }
 
   .contacts{
