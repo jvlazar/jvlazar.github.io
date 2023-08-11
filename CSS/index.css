@@ -238,10 +238,11 @@ a {
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
     display: block;
-   
   }
 
   .banner_info{
+    margin: auto;
+    max-width: 1200px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -254,6 +255,8 @@ a {
   .icon_div{
     width: 15vw;
     height: 15vw;
+    max-width: 171.3px;
+    max-height: 171.3px;
     border-radius: 10em;
     background: linear-gradient(transparent, rgb(255, 250, 238));
     display: flex;
@@ -262,8 +265,11 @@ a {
   }
   
   .icon{
+    /* display: none; */
     width: 10vw;
     height: 14vw;
+    max-width: 109.8px;
+    max-height: 153.717px;
   }
 
 
@@ -332,9 +338,11 @@ a {
   }
 
   .projects{
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
+    max-width: 1200px;
   }
 
   .container {
@@ -342,6 +350,8 @@ a {
     margin: 5vw 0;
     height: 25vw;
     width: 20vw;
+    max-width: 300px;
+    max-height: 367px;
     border-width: 5%;
     border-style: none;
   }
@@ -351,6 +361,8 @@ a {
     position: absolute;
     height: 25vw;
     width: 20vw;
+    max-width: 300px;
+    max-height: 367px;
     overflow: hidden;
     margin: 0;
     border:none;
@@ -366,6 +378,8 @@ a {
     font-size: 2vw;
     height: 25vw;
     width: 20vw;
+    max-width: 300px;
+    max-height: 367px;
     opacity: 0;
   }
 
@@ -398,13 +412,12 @@ a {
   }
 
   .about{
-    width: 80%;
+    width: 100%;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 2fr;
     text-align: left;
     column-gap: 1em;
-  
   }
 
 
@@ -425,12 +438,16 @@ a {
   .about_icon{
     width: 25vw;
     height: 43vw;
+    min-width: 320px;
+    min-height: 550px;
   }
 
 
   .about p{
     margin: 2vw 2vw;
-    line-height: 4vh;
+    line-height: 3vw;
+    font-size: clamp(15px, 2.25vw, 24px);
+    /* line-height: 4vw; */
   }
 
   .resume_pdf{
