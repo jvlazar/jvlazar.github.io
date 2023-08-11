@@ -286,13 +286,13 @@ a {
 
   .tabcontent{
     width: 90%;
-    max-width: 1200px;
-    max-height: 1200px;
+    max-width: 2000px;
+    /* max-height: 1200px; */
     margin: auto;
   }
 
   .header{
-    font-size: clamp(20px, 3vw, 30px);
+    font-size: clamp(20px, 3vw, 36px);
   }
 
   .tab{
@@ -377,7 +377,7 @@ a {
     display: block;
     position: absolute;
     color: rgb(0, 0, 0);
-    font-size: 2vw;
+    font-size: clamp(12px, 2vw, 24px);
     height: 25vw;
     width: 20vw;
     max-width: 300px;
