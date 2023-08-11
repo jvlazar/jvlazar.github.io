@@ -285,7 +285,9 @@ a {
   }
 
   .tabcontent{
-    max-width: 90%;
+    width: 90%;
+    max-width: 1200px;
+    max-height: 1200px;
     margin: auto;
   }
 
@@ -446,7 +448,7 @@ a {
   .about p{
     margin: 2vw 2vw;
     line-height: 3vw;
-    font-size: clamp(15px, 2.25vw, 24px);
+    font-size: clamp(12px, 2vw, 24px);
     /* line-height: 4vw; */
   }
 
