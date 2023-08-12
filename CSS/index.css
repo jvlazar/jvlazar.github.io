@@ -18,7 +18,7 @@
   /* font-weight: 500px; */
   text-align: center;
   display: inline-block;
-  
+  font-family:'Courier New', Courier, monospace;
 
   --primary: #EADBC8;
   --secondary: #DAC0A3;
@@ -72,7 +72,7 @@ body{
 
 .username{
   margin-top: -2%;
-  font-size: 6vw;
+  font-size: 4.5vw;
 }
 
 .tab button{
@@ -252,6 +252,12 @@ a {
     margin-left: auto;
   }
 
+  .banner_info .column:nth-child(2){
+    display: block;
+    margin: auto;
+    padding-left: 1vw;
+  }
+
   .icon_div{
     width: 15vw;
     height: 15vw;
@@ -276,12 +282,13 @@ a {
   .name {
     font-size: clamp(40px, 4vw + 1rem, 60px);
     margin: 0 auto;
-    margin-top: 3vw;
+    overflow: hidden;
+    white-space: nowrap;
   }
   
   .username{
     margin: 0;
-    font-size: clamp(20px, 1vw + 1rem, 30px);
+    font-size: clamp(20px, 1vw, 30px);
   }
 
   .tabcontent{
@@ -448,8 +455,8 @@ a {
   .about p{
     margin: 2vw 2vw;
     line-height: 3vw;
-    font-size: clamp(12px, 2vw, 24px);
-    /* line-height: 4vw; */
+    font-size: clamp(10px, 5vw, 18px);
+    font-weight: 600;
   }
 
   .resume_pdf{
@@ -467,6 +474,22 @@ a {
   width: 3vw;
   height: 3vw;
   margin-right: 1%;
+}
+
+a:link{
+  color:blue;
+}
+a:visited{
+  color:blue;
+}
+a:hover{
+  color:blue;
+}
+a:focus{
+  color:blue;
+}
+a:active{
+  color:blue;
 }
 
 

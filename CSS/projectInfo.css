@@ -14,7 +14,7 @@
   --light-blue-trans: hsla(176, 50%, 60%, 30%);
 
   /* Font */
-  font-family: 'Inter', sans-serif;
+  font-family:'Courier New', Courier, monospace;
   text-align: center;
   display: block;
   /* background: linear-gradient(var(--pale-blue-trans), var(--light-purple-trans)); */
@@ -38,6 +38,7 @@ body {
 
 .container{
   width: 90%;
+  max-width: 2200px;
   margin: auto;
 }
 
@@ -139,7 +140,7 @@ img{
   border: none;
   border-radius: 1em;
   /* background: linear-gradient(var(--light-purple), var(--pale-blue)); */
-  background-color: #7e674a;
+  background-color: #b8513f;
   color: white;
   font-size: clamp(13px, 2vw, 24px);
 }
@@ -163,9 +164,18 @@ img{
     font-size: 1.5vw;
   }
 
+  .container{
+    position: relative;
+    width: 100%;
+    margin: auto;
+  }
+
   .header{
-    display: flex;
-    margin-left: -80vw;
+    width: 20%;
+    text-align: start;
+    margin-left: 0;
+    padding-left: 1vw;
+    
   }
  
   .home_icon{
@@ -173,51 +183,78 @@ img{
     margin-top: 1%;
     width: 2vw;
     height: 2vw;
+    max-width: 20px;
+    max-height: 20px;
     vertical-align: text-bottom;
   }
 
   .header a{
-    font-size: 1.5vw;
     vertical-align: center;
+    font-size: clamp(5px, 1vw, 12px);
   }
 
   h1 {
-    font-size: 3vw;
+    font-size: clamp(12px, 3vw, 32px);
   }
   
-  img{
-    height: 27vw;
-    width: 22vw;
-  }
 
   .gridContainer{
+    width: 90%;
+    max-width: 1500px;
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    place-items: center;
+    place-items: start center;
+    font-size: clamp(12px, 3vw, 16px);
+    
+  }
+
+  .content{
+    margin: auto;
+    max-width: 1500px;
+    width: 90%;
   }
 
   .basic_project_info{
     margin: 0;
   }
   
+  .gridContainer .column:nth-of-type(2) {
+    max-height: 1200px;
+  }
  
   .gridContainer .column:nth-of-type(1) {
+    place-items: center;
+    display: flex;
     order: 2;
+    height: 100%;
+    max-height: 1200px;
+  }
+
+  #main_photo{
+    width: 35vw;
+    height: 50vw;
+    max-width: 450px;
+    max-height: 520px;
   }
 
   .button{
-    width: 20vw;
+    width: 15vw;
     height: 3vw;
+    max-width: 220px;
+    max-height: 30px;
+    font-size: clamp(12px, 3vw, 16px);
     cursor: pointer;
   }
 
   .button:hover{
-    background:linear-gradient(var(--light-purple-trans), var(--pale-blue-trans));
+    background-color: #c4857a;
   }
 
   .specific_project_info{
     margin: auto;
     margin-top: 4vh;
+    font-size: clamp(12px, 3vw, 16px);
   }
 
   a:link{
