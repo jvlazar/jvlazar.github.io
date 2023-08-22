@@ -144,6 +144,11 @@ body{
   display: none;
 }
 
+.todo_list{
+  background-image: url("../images/todo_list/preview.PNG");
+  background-size: cover;
+}
+
 .results{
   background-image: url("../images/results_summary/preview.png");
   background-size: cover;
