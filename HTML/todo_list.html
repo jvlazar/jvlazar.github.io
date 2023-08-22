@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/projectInfo.css">
+    <title>jvlazar | To-Do List</title>
+</head>
+
+<body>
+    <div class="container">
+    <div class="header">
+        <a href="../index.html"> <img class="home_icon" src="../images/icons/home.svg"> <p>Jessica Lazar || jvlazar</p></a>
+    </div>
+
+    <h1>To-Do List</h1>
+    <div class="gridContainer">
+    <div class="column">
+        <section class="specific_project_content">
+            <a href="/React_ToDoList/">
+                <img id="main_photo" class="main_photo results" src="../images/todo_list/preview.png">
+                <p id="main_photo_caption">To-Do List</p>
+
+            </a>
+            <a href="/React_ToDoList/"> <button class="button tryMe" onclick=""> Try Me! </button> </a>
+            
+            <a href="https://github.com/jvlazar/React_ToDoList"> <button class="button code" onclick="">Code </button> </a>
+        </section>
+    </div>
+    <div class="column">
+        <section class="basic_project_info">
+            <h2>Project Information</h2>
+            <p> <b>Project Title: </b> To-Do List</p>
+            <p> <b>Project Languages: </b>HTML, CSS, JavaScript (React)</p>
+            <p> <b>Additional Tools Used: </b>React</p>
+           
+            <p class="project_description"> <b>Project Description: </b>
+            <p>This project replicates a to-do list in which the user can create new tasks, delete existing tasks,
+                and complete in-progress tasks. The user can also view their completed tasks and add them back into the in-progress 
+                tab or delete them. Tasks are ordered chronologically, with the most recently created task showing at the top of the list.
+            </p>
+
+
+        </section>
+    </div>  
+</div>
+
+    <div class="content">
+        <section class="specific_project_info">
+            <h2> Project Specifics</h2>
+
+            <p> Things I Learned: </p>
+            
+                <ul>
+                    <li>React </li>
+                    <ul>
+                        <li>How to create an array of objects</li>
+                        <li>How to access different fields of the object</li>
+                        <li>How to update/change the values of an object's field</li>
+                        <li>How to re-render components only when needed (i.e. using the <em>useEffect()</em> hook)</li>
+                        <li>How to create tabs that only show information given that certain criteria are met</li>
+                    </ul>
+                    <li>How to use localStorage to save and retrieve user-inputted data</li>
+                    <li>How to <em>properly</em> incorporate theme switcher (from light mode to dark mode, and vice versa)</li>
+                </ul>
+            <p> Things I Enjoyed: </p>
+            <ul>
+                <li>Using the ternary operator to display compenents given that certain criteria are met</li>
+                <li>Learning how to properly incorporate theme switcher</li>
+                <li>Coming up with the simple design/layout for the project</li>
+                <li>Continuing to learn React</li>
+            </ul>
+            <p> Things I'd do Differently: </p>
+            <ul>
+                <li>Restructure how information gets passed down to children components (i.e. use the <em>createContext()</em> hook)</li>
+                <li>Start working on this mobile-first</li>
+            </ul>
+            <p> Challenges that were Faced: </p>
+
+            <ul>
+                <li>Changing the data related to a Task and saving that change</li>
+                    <ul><li>
+                        Solved using the <em>setTasks()</em> function for changing states in addition for the <em>map()</em> function and the spread operator
+                    </li></ul>
+                <li>How to ensure each task had a unique id</li>
+                <ul><li>Solved using JavaScript's <em>Date()</em> object that gets called and copied into the new task's <em>timestamp</em> field</li></ul>
+                
+
+            </ul>
+
+        </section>
+       
+
+    </div>
+</div>
+    <div style="height: 150px"></div>
+
+</body>
+
+</html>
