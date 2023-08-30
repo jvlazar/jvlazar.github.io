@@ -232,9 +232,9 @@ img{
   }
 
   #main_photo{
-    width: 35vw;
+    width: 25vw;
     height: 50vw;
-    max-width: 450px;
+    max-width: 320px;
     max-height: 520px;
   }
 
