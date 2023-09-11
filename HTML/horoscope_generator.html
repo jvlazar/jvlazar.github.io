@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/projectInfo.css">
+    <title>jvlazar | Horoscope Generator</title>
+</head>
+
+<body>
+    <div class="container">
+    <div class="header">
+        <a href="../index.html"> <img class="home_icon" src="../images/icons/home.svg"> <p>Jessica Lazar || jvlazar</p></a>
+    </div>
+
+    <h1>Horoscope Generator</h1>
+    <div class="gridContainer">
+    <div class="column">
+        <section class="specific_project_content">
+            <!-- <a href="/FrontendMentor_social_media_dashboard/">
+                <img id="main_photo" class="main_photo results" src="../images/social_media_dashboard/preview.png">
+                <p id="main_photo_caption">Horoscope Generator</p>
+            </a>
+            <a href="/FrontendMentor_social_media_dashboard/"> <button class="button tryMe" onclick=""> Try Me! </button> </a>
+             -->
+            <a href="https://github.com/jvlazar/horoscope_generator"> <button class="button code" onclick="">Code </button> </a>
+        </section>
+    </div>
+    <div class="column">
+        <section class="basic_project_info">
+            <h2>Project Information</h2>
+            <p> <b>Project Title: </b> Horoscope Generator</p>
+            <p> <b>Project Languages: </b>HTML, CSS, JavaScript</p>
+            <p> <b>Additional Tools Used: </b>React, Node JS</p>
+           
+    
+            <p class="project_description"> <b>Project Description: </b>
+            <p>This project shows the daily horoscope for a given Western zodiac sign. 
+            </p>
+            <p>This project was done using React as the frontend library and Node JS/Express JS for backend code.
+                Namely, the frontend was responsible for displaying the user's zodiac sign and the corresponding daily horoscope,
+                while the backend was responsible for making API calls to get the horoscope.
+                
+            </p>
+
+        </section>
+    </div>  
+</div>
+
+    <div class="content">
+        <section class="specific_project_info">
+            <h2> Project Specifics</h2>
+
+            <p> Things I Learned: </p>
+            <ul>
+               <li>Basics of Node/Express JS 
+                    <ul>
+                       <li>How to set up a server</li>
+                       <li>How to receive data from the frontend</li>
+                       <li>How to send data to the frontend</li>
+                       <li>How to use custom Node modules</li>
+                    </ul>
+                </li>
+                <li>How to GET and POST data to/from APIs</li>
+            </ul>
+
+            <p> Things I Enjoyed: </p>
+            <ul>
+                <li>Learning how to connect the frontend code (a React project) with the backend code</li>
+            </ul>
+
+            <p> Things I'd do Differently: </p>
+            <ul>
+                <li>Pick a different type of generator that had plenty of functional (and free) APIs available</li>
+            </ul>
+
+            <p> Challenges that were Faced: </p>
+
+            <ul>
+                <li>Finding free APIs will give me the information I need
+                    <ol>
+                        <li>
+                            Found an API gave me the daily horoscope for a given zodiac sign, but was only available in Portuguese
+                        </li>
+                        <li>
+                            Had to find a free API that would translate from a given language (in this case, Portuguese), to English
+                        </li>
+                        <li>
+                            Translator API had a limit to the amount of characters it can translate per day. 
+                            <ul>
+                                <li>
+                                    Resolved by making one large call to get all the zodiac signs' horoscope translated at once and save it for the day,
+                                    rather than make an API call to translate every time a user selects their zodiac sign
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <li>Getting the data sent to the frontend automatically once it's been calculated from the backend</li>
+                </li>
+
+                
+
+            </ul>
+
+        </section>
+       
+
+    </div>
+</div>
+    <div style="height: 150px"></div>
+
+</body>
+
+</html>
