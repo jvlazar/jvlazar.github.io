@@ -144,6 +144,12 @@ body{
   display: none;
 }
 
+.paired_actors{
+  background-color: white;
+}
+
+
+
 .horoscope_generator{
   background-image: url("../images/horoscope_generator/preview.png");
   background-size: cover;
@@ -407,6 +413,7 @@ a {
     margin-top: 30%;
   }
 
+
   .container:hover .card{
     filter: blur(4px);
     animation: blur 0.25s;
@@ -420,6 +427,12 @@ a {
     color: black;
     border-radius: 1em;   
   }
+
+  .container .paired_actors {
+    border-radius: 1em;   
+    opacity: 1;
+  }
+
 
   .summaryTitle.light{
     color: black;
