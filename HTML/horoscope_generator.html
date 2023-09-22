@@ -19,11 +19,11 @@
     <div class="gridContainer">
     <div class="column">
         <section class="specific_project_content">
-            <!-- <a href="/FrontendMentor_social_media_dashboard/"> -->
+            <a href="/FrontendMentor_social_media_dashboard/">
                 <img id="main_photo" class="main_photo results" src="../images/horoscope_generator/preview.png">
                 <p id="main_photo_caption">Horoscope Generator</p>
-            <!-- </a> -->
-            <!-- <a href="/FrontendMentor_social_media_dashboard/"> <button class="button tryMe" onclick=""> Try Me! </button> </a> -->
+            </a>
+            <a href="https://horoscope-generator.onrender.com/"> <button class="button tryMe" onclick=""> Try Me! </button> </a>
             
             <a href="https://github.com/jvlazar/horoscope_generator"> <button class="button code" onclick="">Code </button> </a>
         </section>
@@ -64,11 +64,18 @@
                     </ul>
                 </li>
                 <li>How to GET and POST data to/from APIs</li>
+                <li>How to deploy a full-stack app (using the <a href="https://render.com/">Render</a> hosting service)</li>
             </ul>
 
             <p> Things I Enjoyed: </p>
             <ul>
                 <li>Learning how to connect the frontend code (a React project) with the backend code</li>
+                <li>Figuring out how to limit the number of times the user makes an API call (to work within the limitations of the translation API)
+                    <ul>
+                        <li>Solved using JavaScript's Date object and storing each sign's horoscope to local storage</li>
+                        <li>Every time an API call is made, the program first checks the local storage to determine if the daily horoscope is already present. If so, check the date. If it's a new date or the message isn't stored, make the API call</li>
+                    </ul>
+                </li>
             </ul>
 
             <p> Things I'd do Differently: </p>
@@ -79,6 +86,7 @@
             <p> Challenges that were Faced: </p>
 
             <ul>
+                <li>Learning how to host a full-stack app</li>
                 <li>Finding free APIs will give me the information I need
                     <ol>
                         <li>
@@ -91,8 +99,7 @@
                             Translator API had a limit to the amount of characters it can translate per day. 
                             <ul>
                                 <li>
-                                    Resolved by making one large call to get all the zodiac signs' horoscope translated at once and save it for the day,
-                                    rather than make an API call to translate every time a user selects their zodiac sign
+                                   Resolved by saving the sign's message and date of API call to local storage. Then, any time an API call is made, the program checks the local storage to determine if the daily horoscope is already present. If so, it check the date. If it's a new date or the message isn't stored, the API call is made and the frontend receives that sign's horoscope/message for the day
                                 </li>
                             </ul>
                         </li>
