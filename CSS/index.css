@@ -148,6 +148,10 @@ body{
   background-color: white;
 }
 
+.space_website{
+  background-image: url("../images/space_website/preview.PNG");
+  background-size: cover;
+}
 
 
 .horoscope_generator{
