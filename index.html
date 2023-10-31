@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    
     <script src="./JS/index.js"> </script>
     <title>jvlazar | Home</title>
@@ -29,6 +30,15 @@
             <div class="column">
             <p class="name"> Jessica Lazar</p>
             <p class="username"> Junior Full-Stack Developer</p>
+            <div class="user_info">
+                <div class="column">
+                    <a href = "mailto: jvlazar@gmail.com"> <i class="fa fa-envelope"></i>
+                    <p class="email">jvlazar@gmail.com</p></a>
+                </div>
+                <div class="column">
+                    <a href="https://github.com/jvlazar"> <img src="./images/icons/github-mark.svg"> <p class="github">jvlazar</p></a>
+                </div>
+            </div>
             </div>
         </div>
         <!--TAB types-->
@@ -36,7 +46,7 @@
             <button id="about_button" class="tablinks" onclick="openTab(event, 'about_tab')">About</button>
             <button id="projects_button" class="tablinks" onclick="openTab(event, 'projects_tab')" >Projects</button>
             <button id="resume_button" class="tablinks" onclick="openTab(event, 'resume_tab')">Resume</button>
-            <button id="contact_button" class="tablinks" onclick="openTab(event, 'contact_tab')">Links</button>
+            <!-- <button id="contact_button" class="tablinks" onclick="openTab(event, 'contact_tab')">Links</button> -->
         </div>
 
 
@@ -51,188 +61,196 @@
         <h3 class="header"> Projects</h3>
         <section class="projects">
             
-        <div class="container">
-            <a href="./HTML/pairedactors.html">
-                <div class="card paired_actors"></div>
-                <div class="cardTitle"> 
-                    <div class="summaryTitle">
-                        <p>
-                            Paired Actors
-                        </p>
-                        <p> ------ </p>
-                        <p>Personal Projects</p>
-                    </div>
+            <h2 class="projects_title">Personal Projects</h2>
+            <hr>
+            <div class="project_container">
+                <div class="container">
+                    <a href="./HTML/pairedactors.html">
+                        <div class="card paired_actors"></div>
+                        <div class="cardTitle"> 
+                            <div class="summaryTitle">
+                                <p>
+                                    Paired Actors
+                                </p>
+                                <p> ------ </p>
+                                <p>Personal Project</p>
+                            </div>
+                        </div>
+                        <h5 class="title">Paired Actors</h5>
+                        <h5 class="title">Personal Project</h5>
+                    </a>
                 </div>
-                <h5 class="title">Paired Actors</h5>
-                <h5 class="title">Personal Project</h5>
-            </a>
-        </div>
 
-        <div class="container">
-            <a href="./HTML/space-website.html">
-                <div class="card space_website"></div>
+                <div class="container">
+                    <a href="./HTML/horoscope_generator.html">
+                        <div class="card horoscope_generator"></div>
+                        <div class="cardTitle"> 
+                            <div class="summaryTitle">
+                                <p>
+                                    Horoscope Generator
+                                </p>
+                                <p> ------ </p>
+                                <p>Personal Project</p>
+                            </div>
+                        </div>
+                        <h5 class="title">Horoscope Generator </h5>
+                        <h5 class="title">Personal Project</h5>
+                    </a>
+                </div>
+        
+                <div class="container">
+                    <a href="./HTML/todo_list.html">
+                        <div class="card todo_list"></div>
+                        <div class="cardTitle"> 
+                            <div class="summaryTitle">
+                                <p>
+                                To-Do List
+                                </p>
+                                <p> ------ </p>
+                                <p>Personal Project</p>
+                            </div>
+                        </div>
+                        <h5 class="title">To-Do List </h5>
+                        <h5 class="title">Personal Project</h5>
+                    </a>
+                </div>
+            
+                
+                <div class="container">
+                    <a href="./HTML/wordlereplica.html">
+                    <div class="card wordle"> </div>
+                    <div class="cardTitle"> 
+                        <div class="summaryTitle">
+                            <p>
+                            Wordle Replica
+                            </p>
+                            <p> ------ </p>
+                            <p>Personal Project</p>
+                        </div>
+                    </div>
+                </a>
+                    <h5 class="title">Wordle Replica</h5>
+                    <h5 class="title">Personal Project</h5>
+                </div>
+            </div>
+
+
+        <h2 class="projects_title">Online Projects</h2>
+        <hr>
+        <div class="project_container">
+            <div class="container">
+                <a href="./HTML/space-website.html">
+                    <div class="card space_website"></div>
+                    <div class="cardTitle"> 
+                        <div class="summaryTitle">
+                            <p>
+                                Space Tourism Multi-Page Website
+                            </p>
+                            <p> ------ </p>
+                            <p>Frontend Mentor</p>
+                        </div>
+                    </div>
+                    <h5 class="title">Space Tourism Multi-Page Website </h5>
+                    <h5 class="title">Frontend Mentor</h5>
+                </a>
+            </div>
+    
+            <div class="container">
+                <a href="./HTML/social_media_dashboard.html">
+                <div class="card social_media_dashboard"> </div>
                 <div class="cardTitle"> 
                     <div class="summaryTitle">
                         <p>
-                            Space Tourism Multi-Page Website
+                        Social Media Dashboard
                         </p>
                         <p> ------ </p>
                         <p>Frontend Mentor</p>
                     </div>
                 </div>
-                <h5 class="title">Space Tourism Multi-Page Website </h5>
+                </a>
+                <h5 class="title">Social Media Dashboard</h5>
                 <h5 class="title">Frontend Mentor</h5>
-            </a>
-        </div>
-
-        <div class="container">
-            <a href="./HTML/horoscope_generator.html">
-                <div class="card horoscope_generator"></div>
+            </div>
+        
+            <div class="container">
+            <a href="./HTML/results_summary_component.html">
+                <div class="card results"> </div>
                 <div class="cardTitle"> 
                     <div class="summaryTitle">
                         <p>
-                            Horoscope Generator
+                        Results Summary Component
                         </p>
                         <p> ------ </p>
-                        <p>Personal Project</p>
+                        <p>Frontend Mentor</p>
                     </div>
                 </div>
-                <h5 class="title">Horoscope Generator </h5>
-                <h5 class="title">Personal Project</h5>
-            </a>
-        </div>
-
-        <div class="container">
-            <a href="./HTML/todo_list.html">
-                <div class="card todo_list"></div>
-                <div class="cardTitle"> 
-                    <div class="summaryTitle">
-                        <p>
-                        To-Do List
-                        </p>
-                        <p> ------ </p>
-                        <p>Personal Project</p>
-                    </div>
-                </div>
-                <h5 class="title">To-Do List </h5>
-                <h5 class="title">Personal Project</h5>
-            </a>
-        </div>
-    
-         
-        <div class="container">
-            <a href="./HTML/social_media_dashboard.html">
-            <div class="card social_media_dashboard"> </div>
-            <div class="cardTitle"> 
-                <div class="summaryTitle">
-                    <p>
-                    Social Media Dashboard
-                    </p>
-                    <p> ------ </p>
-                    <p>Frontend Mentor Project</p>
-                </div>
-            </div>
-            </a>
-            <h5 class="title">Social Media Dashboard</h5>
-            <h5 class="title">Frontend Mentor</h5>
-        </div>
-    
-
-        <div class="container">
-            <a href="./HTML/wordlereplica.html">
-            <div class="card wordle"> </div>
-            <div class="cardTitle"> 
-                <div class="summaryTitle">
-                    <p>
-                    Wordle Replica
-                    </p>
-                    <p> ------ </p>
-                    <p>Personal Project</p>
-                </div>
-            </div>
-        </a>
-            <h5 class="title">Wordle Replica</h5>
-            <h5 class="title">Personal Project</h5>
-         </div>
-
-
-    
-        <div class="container">
-        <a href="./HTML/results_summary_component.html">
-            <div class="card results"> </div>
-            <div class="cardTitle"> 
-                <div class="summaryTitle">
-                    <p>
-                    Results Summary Component
-                    </p>
-                    <p> ------ </p>
-                    <p>Frontend Mentor Project</p>
-                </div>
-            </div>
-            
-            <h5 class="title">Results Summary Component </h5> 
-            <h5 class="title"> Frontend Mentor</h5>
-        </a>
-    
-    </div>
-
-    
-        <div class="container">
-            <a href="./HTML/fylo.html">
-                <div class="card fylo"></div>
-                <div class="cardTitle"> 
-                    <div class="summaryTitle">
-                        <p>
-                        Fylo Landing Page
-                        </p>
-                        <p> ------ </p>
-                        <p>Frontend Mentor Project</p>
-                    </div>
-                </div>
-                <h5 class="title">Fylo Landing Page </h5>
+                
+                <h5 class="title">Results Summary Component </h5> 
                 <h5 class="title"> Frontend Mentor</h5>
             </a>
+        
         </div>
 
-
-    
-        <div class="container">
-            <a href="./HTML/agecalculator.html">
-                <div class="card ageCalculator"></div>
-                <div class="cardTitle"> 
-                    <div class="summaryTitle light">
-                        <p>
-                        Age Calculator
-                        </p>
-                        <p> ------ </p>
-                        <p>Frontend Mentor Project</p>
+            <div class="container">
+                <a href="./HTML/fylo.html">
+                    <div class="card fylo"></div>
+                    <div class="cardTitle"> 
+                        <div class="summaryTitle">
+                            <p>
+                            Fylo Landing Page
+                            </p>
+                            <p> ------ </p>
+                            <p>Frontend Mentor</p>
+                        </div>
                     </div>
-                </div>
-                <h5 class="title">Age Calculator</h5>
-                <h5 class="title">Frontend Mentor</h5>
-            </a>
+                    <h5 class="title">Fylo Landing Page </h5>
+                    <h5 class="title"> Frontend Mentor</h5>
+                </a>
+            </div>
+
+            <div class="container">
+                <a href="./HTML/agecalculator.html">
+                    <div class="card ageCalculator"></div>
+                    <div class="cardTitle"> 
+                        <div class="summaryTitle light">
+                            <p>
+                            Age Calculator
+                            </p>
+                            <p> ------ </p>
+                            <p>Frontend Mentor</p>
+                        </div>
+                    </div>
+                    <h5 class="title">Age Calculator</h5>
+                    <h5 class="title">Frontend Mentor</h5>
+                </a>
+            </div>
         </div>
-    
 
-    
-        <div class="container">
-            <a href="./HTML/librarysystem.html">
-                <div class="card librarySystem"></div>
-                <div class="cardTitle"> 
-                    <div class="summaryTitle light">
-                        <p>
-                        Library System
-                        </p>
-                        <p> ------ </p>
-                        <p>School Project</p>
+        <h2 class="projects_title">School Projects</h2>
+        <hr>
+        <div class="project_container">
+            <div class="container">
+                <a href="./HTML/librarysystem.html">
+                    <div class="card librarySystem"></div>
+                    <div class="cardTitle"> 
+                        <div class="summaryTitle light">
+                            <p>
+                            Library System
+                            </p>
+                            <p> ------ </p>
+                            <p>School Project</p>
+                        </div>
                     </div>
-                </div>
-                <h5 class="title">Library System</h5>
-                <h5 class="title">School Project</h5>
-            </a>
+                    <h5 class="title">Library System</h5>
+                    <h5 class="title">School Project</h5>
+                </a>
+            </div>
         </div>
         </section>
     </div>
+
+
+
     <div id="about_tab" class="tabcontent">
         <div class="about_header">
             <h3 class="header"> About Me</h3>

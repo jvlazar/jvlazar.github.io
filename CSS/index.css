@@ -1,17 +1,4 @@
 :root {
-  /* Base colours */
-  --dark-blue: rgb(26, 68, 97);
-  --medium-blue: rgb(23, 107, 135);
-  --light-blue: hsl(176, 50%, 60%);
-  --highlight-blue: rgb(218, 255, 251);
-
-  --light-purple: hsl(254, 45%, 78%);
-  --pale-blue: hsl(226, 34%, 75%);
-  
-  --light-purple-trans: hsla(254, 45%, 78%, 50%);
-  --pale-blue-trans: hsla(226, 34%, 75%, 50%);
-  --light-blue-trans: hsla(176, 50%, 60%, 30%);
-  --medium-blue-trans: hsla(195, 71%, 31%, 50%);
 
   /* Font */
   /* font-family:'Courier New', Courier, monospace ; */
@@ -37,11 +24,15 @@ body{
   /* background: linear-gradient(var(--pale-blue-trans), var(--light-purple-trans)); */
 }
 
+::selection {
+  background: var(--tertiary);
+  color: white;
+}
 
 .banner{
   background-color: var(--secondary);
   /* background: linear-gradient(var(--dark-blue), var(--medium-blue)); */
-  color: white;
+  color: rgb(0, 0, 0);
   padding-top: 1vh;
   padding-bottom: 1vh;
   border-bottom-left-radius: 1em;
@@ -75,6 +66,28 @@ body{
   font-size: 4.5vw;
 }
 
+.user_info{
+  font-size:  4vw;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.user_info a{
+  display: inline-flex;
+  margin: auto;
+  align-items: center;
+}
+
+
+.user_info img, .user_info .fa-envelope{
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  color: black;
+}
+
+
 .tab button{
   width: 20vw;
   height: 10vw;
@@ -106,6 +119,10 @@ body{
 
 .title {
   font-size: 3.5vw;
+}
+
+.projects_title{
+  font-size: 40px;
 }
 
 .projects{
@@ -254,7 +271,7 @@ a {
     padding-top: 5%;
     background-color:var(--secondary);
     /* background: linear-gradient(var(--dark-blue), var(--medium-blue)); */
-    color: white;
+    color: black;
     width: auto;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
@@ -312,6 +329,28 @@ a {
     font-size: clamp(20px, 1vw, 30px);
   }
 
+  .user_info{
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 20px;
+  }
+
+  .user_info a{
+    display: inline-flex;
+    margin: auto;
+    align-items: center;
+  }
+  
+
+  .user_info img, .user_info .fa-envelope{
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    color: black;
+  }
+
   .tabcontent{
     width: 90%;
     max-width: 2000px;
@@ -367,14 +406,30 @@ a {
     font-size: clamp(12px, 4vw, 32px);
   }
 
+  .projects_title{
+    display: flex;
+    margin: auto;
+    margin-left: 0;
+    font-size: 24px;
+  }
+
+  hr{
+    width: 100%;
+  }
+
   .projects{
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
     max-width: 1200px;
   }
 
+  .project_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 50px;
+  }
+  
   .container {
     position: relative;
     margin: 5vw 0;
@@ -418,6 +473,9 @@ a {
     margin-top: 30%;
   }
 
+  .card img{
+    background-size: cover;
+  }
 
   .container:hover .card{
     filter: blur(4px);
@@ -505,19 +563,19 @@ a {
 }
 
 a:link{
-  color:blue;
+  color:black;
 }
 a:visited{
-  color:blue;
+  color:black;
 }
 a:hover{
-  color:blue;
+  color:black;
 }
 a:focus{
-  color:blue;
+  color:black;
 }
 a:active{
-  color:blue;
+  color:black;
 }
 
 
