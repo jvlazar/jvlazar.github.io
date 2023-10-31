@@ -345,9 +345,9 @@ a {
 
   .user_info img, .user_info .fa-envelope{
     margin: 0 10px;
-    width: 40px;
-    height: 40px;
-    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
     color: black;
   }
 
