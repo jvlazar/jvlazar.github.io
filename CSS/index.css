@@ -145,7 +145,8 @@ body{
 }
 
 .paired_actors{
-  background-color: white;
+  background-image: url("../images/paired_actors/preview.png");
+  background-size: cover;
 }
 
 .space_website{
