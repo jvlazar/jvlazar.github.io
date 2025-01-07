@@ -16,7 +16,6 @@
   --shadow: #a2775d;
   color: #251910;
   font-weight: 500;
-  /* #d0daa3 */
  
 }
 
@@ -27,9 +26,6 @@ body{
   background-color: var(--background);
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  align-items: center;
   /* background: linear-gradient(var(--pale-blue-trans), var(--light-purple-trans)); */
 }
 
@@ -106,28 +102,6 @@ a:active {
   text-decoration: none;
 } 
 
-.nav_bar{
-  display: flex;
-  background-color: var(--background_text);
-  width: 100%;
-  text-align: right;
-}
-
-.nav_bar_name{
-  margin-left: 20px;
-  color: var(--nav_bar_text_color);
-  cursor: pointer;
-}
-
-.nav_bar_name:hover{
-  color: var(--nav_bar_text_active);
-}
-
-.nav_bar_pages{
-  display: flex;
-  position: absolute;
-  right: 0;
-}
 
 
 @media (width <= 700px){

@@ -1,0 +1,37 @@
+.nav_bar{
+    display: flex;
+    background-color: var(--background_text);
+    width: 100%;
+    text-align: right;
+  }
+  
+  .nav_bar_name{
+    margin-left: 20px;
+    color: var(--nav_bar_text_color);
+    cursor: pointer;
+  }
+  
+  .nav_bar_name:hover{
+    color: var(--nav_bar_text_active);
+  }
+  
+  .nav_bar_pages{
+    display: flex;
+    position: absolute;
+    right: 0;
+  }
+  
+  .content{
+    /* background-color: blue; */
+    width: 80%;
+    position: absolute;
+    margin: auto;
+    margin-top: 70px;
+    left: 0;
+    right: 0;
+  }
+  
+  .section_header{
+    display: flex;
+    font-size: 42px;
+  }
