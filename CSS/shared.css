@@ -34,4 +34,5 @@
   .section_header{
     display: flex;
     font-size: 42px;
+    color: var(--text_header);
   }

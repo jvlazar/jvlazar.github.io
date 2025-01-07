@@ -5,14 +5,18 @@
   /* font-weight: 500px; */
   text-align: center;
   display: inline-block;
-  font-family:'Courier New', Courier, monospace;
+  font-family: "JetBrains Mono", serif;
+  font-optical-sizing: auto;
+
 
   --background: #FFF1E8;
+  --background_hover: #fceade;
   --background_text: #FFFBF9;
   --nav_bar_text_color: #920909;
   --nav_bar_dot_color: #DE8C6E;
   --nav_bar_text_active: #F0B2B2;
   --text_highlight: rgb(208, 131, 131);
+  --text_header: rgb(114, 29, 29);
   --shadow: #a2775d;
   color: #251910;
   font-weight: 500;
