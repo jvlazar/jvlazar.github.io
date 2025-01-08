@@ -31,7 +31,7 @@
         <h1 class="section_header">Projects</h1>
         <h3 class="project_section_title">Personal</h3>
             <ul>
-                <div class="project">
+                <div class="project" id="project_paired_actors" onclick="showModal(this)">
                     <!-- <a href="https://pairedactors.netlify.app/"> -->
                         <p class="project_title">Paired Actors</p>
                         <div class="project_info">
@@ -40,18 +40,27 @@
                         </div>
                     <!-- </a> -->
                     <!-- ON CLICK, ADD MODAL THAT POPS UP CONTAINING IFRAME OF THE WEBSITE -->
+                      
                 </div>
-                <div class="project">
+                    <div class="modal_content" id="modal_paired_actors">
+                        <span class="close" id="close_modal" onclick="closeModal()">&times;</span>
+                        <h1> here is the modal content</h1>
+                        <iframe src="https://pairedactors.netlify.app/"></iframe>
+                    </div>
+                <div class="project" id="project_wordle" onclick="showModal(this)">
                   
                         <p class="project_title">Wordle</p>
                         <div class="project_info">
                             <p class="project_description"> Re-creation of the popular NYT game Wordle.</p>
                             <p class="project_tools">Tools used: HTML, CSS, JavaScript</p>
                         </div>
-                  
-                </div>
-                <div class="project">
-                    
+                    </div>
+                    <div class="modal_content" id="modal_wordle">
+                        <span class="close" id="close_modal" onclick="closeModal()">&times;</span>
+                        <h1> here is the modal content</h1>
+                        <iframe src="https://jvlazar.github.io/wordle_replica"></iframe>
+                    </div>
+                <div class="project" id="flash_cards"> 
                         <p class="project_title">ASL Flash Cards (Private)</p>
                         <div class="project_info">
                             <p class="project_description"> Web app of flash cards to help practice ASL (American Sign Language).</p>
@@ -59,8 +68,7 @@
                         </div>
                    
                 </div>
-                <div class="project">
-                   
+                <div class="project">  
                         <p class="project_title">Music Metadata API (Private)</p>
                         <div class="project_info">
                             <p class="project_description"> Application to add metadata to local .m4a files, given the album name, artist name, and the name of one song in the album. Program is built using the "ffmetadata" package.</p>
