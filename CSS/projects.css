@@ -68,6 +68,8 @@ a:hover{
     display: none;
     background-color: var(--background_text);
     position: absolute;
+    grid-template-columns: 1fr 1fr;
+    column-count: 2;
     /* right: -10%; */
     right: 0%;
     top: 10%;
@@ -75,13 +77,18 @@ a:hover{
     padding: 20px;
     /* border: 1px solid #888; */
     min-width: 400px;
-    width: 60%;
+    width: 70%;
     max-width: 1200px; /* Could be more or less, depending on screen size */
     max-height: 600px;
     filter: none;
     animation-name: slide;
     animation-duration: 1s;
     box-shadow: 0px 5px 10px var(--shadow);
+    overflow: auto;
+}
+
+.column:nth-child(1){
+    text-align: left;
 }
 
 iframe{
@@ -103,7 +110,7 @@ iframe{
 
 .close {
     color: #aaa;
-    float: right;
+    float: left;
     font-size: 28px;
     font-weight: bold;
   }

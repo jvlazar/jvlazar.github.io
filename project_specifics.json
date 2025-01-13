@@ -1,7 +1,0 @@
-{
-    "modal": "modal_paired_actors",
-    "name": "Paired_actors",
-    "language": "HTML, CSS, JavaScript",
-    "additional tools": "React",
-    "description": "The goal of this project was to enable a user to search the name of 2 actors to see if they've been in any movies or tv shows together. While the user could simply go to IMDB to find the same results, this would involve clicking through multiple links and scrolling through each actor's filmography. To simplify this task, this project does the comparisons for you and displays the results all on one page; no need to click through multiple links and go back and forth between pages anymore. Additionally, this project was used as a teaching mechanism for a colleague to help understand the basics of React. I used this project to go over the basic concepts of React such as React components, CSS modules, and managing React States."
-}

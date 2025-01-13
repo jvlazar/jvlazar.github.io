@@ -1,0 +1,20 @@
+[
+    {
+        "modal": "modal_paired_actors",
+        "name": "Paired_actors",
+        "language": "HTML, CSS, JavaScript",
+        "tools": "React",
+        "description": "The goal of this project was to enable a user to search the name of 2 actors to see if they've been in any movies or tv shows together. While the user could simply go to IMDB to find the same results, this would involve clicking through multiple links and scrolling through each actor's filmography. To simplify this task, this project does the comparisons for you and displays the results all on one page; no need to click through multiple links and go back and forth between pages anymore.",
+        "link": "https://pairedactors.netlify.app/"
+        
+    },
+    {
+        "modal": "modal_wordle",
+        "name": "wordle",
+        "language": "HTML, CSS, JavaScript",
+        "tools": null,
+        "description": "This project is an attempt to re-create the popular web-game 'Wordle', originally created by Josh Wardle. Upon each page refresh, a new word is loaded for the user to guess. The user has to guess the word in 6 tries. If the letter and its position is correct, the tile turns green. If that letter is present in the word, but isn't in the correct position, the tile turns yellow.",
+        "link": "https://jvlazar.github.io/wordle_replica/"
+    }
+]
+

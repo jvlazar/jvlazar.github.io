@@ -1,7 +1,8 @@
+// import data from "./project_specifics.json"
 let activeModal = null;
 let activeProject = null;
 let activeTab = null;
-
+let projectData = null;
 // function openTab(evt, tabName) {
 //   sessionStorage.clear();
 //   var i, tabcontent, tablinks;
@@ -19,12 +20,9 @@ let activeTab = null;
 //   evt.currentTarget.className += " active";
 
 onload = (event) => {
-  console.log(`window loaded`);
-  console.log(`active from local storage is ${localStorage.getItem("active tab")}`);
   if (localStorage.getItem("active tab") != "null"){
     activeTab = localStorage.getItem("active tab");
     var li = document.getElementById(activeTab);
-    console.log(li);
     li.classList.add(`name_card_para_active`);
   }
 }
@@ -36,13 +34,11 @@ onload = (event) => {
 
 // set active tab
 function setActive(page){
-  console.log(page.id);
   if (page.id != "nav_bar_name"){
     activeTab = page.id;
   } else {
     activeTab = null;
   }
-  console.log(`setting new active to ${activeTab}`);
   localStorage.setItem("active tab", activeTab);
 }
 
@@ -53,21 +49,11 @@ function showModal(clicked_div){
   const project_name = clicked_div.id.replace("project_", "")
   activeProject = project_name;
   const modal = document.getElementById(`modal_${project_name}`);
-  modal.style.display = "flex";
+  modal.style.display = "grid";
   activeModal = modal;
   document.activeElement.blur();
-  // blur background
-  // document.getElementById(activeProject).style.color = "red";
-  console.log(`active modal is${activeModal}`);
-  console.log(activeModal.classList);
-  const ele = document.getElementsByClassName('project');
-  // document.getElementById("content").style.filter = "blur(5px)";
-  // modal.style.filter = "none";
-  console.log(modal.style.filter);
-  // for (let index = 0; index < ele.length; index++) {
-  //   console.log(ele[index].id);
-  //   document.getElementById(ele[index].id).style.filter = "blur(10px)";
-  // }
+
+  showData();
 }
 
 // closing modal on clicking the span
@@ -81,11 +67,33 @@ function closeModal() {
   activeModal = null;
 }
 
-// closing modal on clicking outside of it
+
+async function showData(){
+console.log(`active modal is ${activeModal.id}`);
+    let data = await fetch('./JS/project_specifics.json')
+      .then(response => response.json());
+      for (let index = 0; index < data.length; index++){
+        console.log(data[index].modal);
+        if (data[index].modal == activeModal.id){
+          console.log(`they are the same`);
+          document.getElementsByClassName("languages")[index].innerHTML = data[index].language;
+          document.getElementsByClassName("modal_info")[index].innerHTML = data[index].description;
+          document.getElementsByClassName("link")[index].href = data[index].link;
+          if (data[index].modal.tools != "null"){
+            document.getElementsByClassName("tools")[index].innerHTML = data[index].tools;
+          }
+        }
+
+      }
+
+      
+      // console.log(document.getElementsByClassName("modal_info")[0]);
+      
+     
+}
+
 
 function main(){
-  
-
   window.addEventListener("click", function(e){
     if (activeTab == "name_card_projects"){
       let modal = activeModal;
