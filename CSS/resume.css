@@ -1,0 +1,26 @@
+
+.content {
+    display: block;
+    color: var(--nav_bar_text_color);
+}
+.column_div{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* background-color: var(--background_text); */
+    margin: 20px 0;
+}
+
+.inner_column_div{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    text-align: left;
+    margin: 25px;
+}
+
+.education_div p{
+    line-height: 15px;
+}
+
+.content h3{
+    font-size: 24px;
+}
