@@ -44,6 +44,10 @@
     line-height: 5px;
 }
 
+.project.private:hover{
+    cursor: default;
+    background-color: transparent;
+}
 
 
 a:hover{
