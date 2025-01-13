@@ -7,12 +7,12 @@
   
   .nav_bar_name{
     margin-left: 20px;
-    color: var(--nav_bar_text_color);
+    /* color: var(--nav_bar_text_color); */
     cursor: pointer;
   }
   
   .nav_bar_name:hover{
-    color: var(--nav_bar_text_active);
+    /* color: var(--nav_bar_text_active); */
     cursor: pointer;
   }
   
@@ -37,3 +37,12 @@
     font-size: 42px;
     color: var(--text_header);
   }
+
+  .name_card_para_active a{
+    color: var(--nav_bar_text_active);
+    /* background-color: red; */
+  }
+
+
+ 
+  

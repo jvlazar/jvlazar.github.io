@@ -102,11 +102,17 @@ a:hover {
 
 /* selected link */
 a:active {
-  color: var(--nav_bar_text_color);
+  color: var(--nav_bar_text_active);
   text-decoration: none;
 } 
 
+#name_card_about:active{
+  color: black;
+}
 
+.nav_bar p{
+  color: black;
+}
 
 @media (width <= 700px){
 
