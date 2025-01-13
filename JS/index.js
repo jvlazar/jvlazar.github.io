@@ -55,12 +55,29 @@ function showModal(clicked_div){
   const modal = document.getElementById(`modal_${project_name}`);
   modal.style.display = "flex";
   activeModal = modal;
-  document.activeElement.blur()
+  document.activeElement.blur();
+  // blur background
+  // document.getElementById(activeProject).style.color = "red";
+  console.log(`active modal is${activeModal}`);
+  console.log(activeModal.classList);
+  const ele = document.getElementsByClassName('project');
+  // document.getElementById("content").style.filter = "blur(5px)";
+  // modal.style.filter = "none";
+  console.log(modal.style.filter);
+  // for (let index = 0; index < ele.length; index++) {
+  //   console.log(ele[index].id);
+  //   document.getElementById(ele[index].id).style.filter = "blur(10px)";
+  // }
 }
 
 // closing modal on clicking the span
 function closeModal() {
   document.getElementById(activeModal.id).style.display = "none";
+  document.getElementById("content").style.filter = "none";
+  const ele = document.getElementsByClassName('project');
+  for (let index = 0; index < ele.length; index++) {
+    document.getElementById(ele[index].id).style.filter = "none";
+  }
   activeModal = null;
 }
 

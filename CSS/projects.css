@@ -1,7 +1,3 @@
-body{
-
-}
-
 .project_section_title{
     display: flex;
     font-size: 1.5rem;
@@ -22,7 +18,8 @@ body{
     margin: 10px auto;
     padding: 5px 0;
     padding-left: 10px;
-    
+    text-align:left;
+    filter: none;
 }
 
 .project:hover{
@@ -47,11 +44,7 @@ body{
     line-height: 5px;
 }
 
-iframe{
 
-    width: 300px;
-    height: 100%;;
-}
 
 a:hover{
     color: var(--nav_bar_text_color);
@@ -61,22 +54,51 @@ a:hover{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
+    /* left: 0;
+    top: 0; */
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
   }
 
 .modal_content{
     display: none;
     background-color: var(--background_text);
-    margin: 15% auto; /* 15% from the top and centered */
+    position: absolute;
+    /* right: -10%; */
+    right: 0%;
+    top: 10%;
+    /* margin: auto; 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    /* border: 1px solid #888; */
+    min-width: 400px;
+    width: 60%;
+    max-width: 1200px; /* Could be more or less, depending on screen size */
+    max-height: 600px;
+    filter: none;
+    animation-name: slide;
+    animation-duration: 1s;
+    box-shadow: 0px 5px 10px var(--shadow);
+}
+
+iframe{
+    margin: auto;
+    margin-right: 0;
+    width: 320px;
+    height: 550px;;
+}
+
+@keyframes slide {
+    0%   {right: -50%}
+    100% {right: 0%;}
+  }
+  
+@keyframes fade {
+    0% {opacity: 0;}
+    100%{opacity: 100%;}
 }
 
 .close {
