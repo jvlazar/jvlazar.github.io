@@ -1,0 +1,36 @@
+.column_div{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: var(--nav_bar_text_color);
+}
+
+
+
+.column{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    /* padding: 20px; */
+    text-align: left;
+}
+
+.column:nth-child(1){
+    background-color: var(--background_text);
+    margin:auto;
+}
+
+.column:nth-child(2){
+    line-height: 30px;
+}
+
+.content p{
+    margin: 10px 0;
+}
+
+.content h2{
+    font-size: 35px;
+}
+
