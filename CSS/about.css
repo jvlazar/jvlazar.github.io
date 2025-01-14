@@ -42,4 +42,12 @@
     margin: auto;
     width: 500px;
     height: 500px;
+    animation: fade;
+    animation-duration: 2.5s;
+}
+
+
+@keyframes fade{
+ 0%{opacity: 0;}
+ 100%{opacity: 100%;}
 }

@@ -85,8 +85,8 @@ a:hover{
     max-width: 1200px; /* Could be more or less, depending on screen size */
     max-height: 600px;
     filter: none;
-    animation-name: slide;
-    animation-duration: 1s;
+    animation-name: slide, fade;
+    animation-duration: 1s, 1.25s;
     box-shadow: 0px 5px 10px var(--shadow);
     overflow: auto;
 }
@@ -109,6 +109,7 @@ iframe{
   
 @keyframes fade {
     0% {opacity: 0;}
+    /* 50%{opacity: 75%}; */
     100%{opacity: 100%;}
 }
 
