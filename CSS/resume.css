@@ -24,3 +24,18 @@
 .content h3{
     font-size: 24px;
 }
+
+@media (width <= 700px){
+    .column_div{
+        display: block;
+    }
+    
+    .inner_column_div{
+        display: block;
+        margin: 50px 0;
+    }
+
+    .content p, .content li{
+        line-height: 30px;
+    }
+}
