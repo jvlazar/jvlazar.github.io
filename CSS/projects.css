@@ -101,7 +101,7 @@ iframe{
     margin: auto;
     margin-right: 0;
     width: 320px;
-    height: 550px;;
+    height: 600px;;
 }
 
 .link{
@@ -132,3 +132,52 @@ iframe{
     text-decoration: none;
     cursor: pointer;
   }
+
+
+  @media (width <= 700px){
+   .content{
+    display:block;
+    line-height: 40px;
+   }
+
+   .project_title{
+    line-height: 40px;
+   }
+
+
+   .content ul{
+    margin: 0;
+    padding: 0;
+   }
+
+   .modal{
+    display: none;
+    left: 0;
+    width: 100%;
+   }
+
+   .modal_content{
+    grid-template-columns: 0;
+    left: 0;
+    min-width: 200px;
+    width: 90%;
+   }
+  
+    .column:nth-child(1) p{
+        text-align: left;
+        margin-top:10px;
+        margin-left: 0;
+    }
+
+ 
+
+    .languages{
+        /* color: red; */
+    }
+
+    .modal_content p{
+        padding-top: 10px;
+    }
+
+ 
+}

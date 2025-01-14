@@ -7,14 +7,19 @@ let menu = "inactive";
 window.addEventListener('resize', function(){
   if (menu == "active"){
     if (window.innerWidth > 700 &&  document.getElementById("nav_bar_pages").style.display != "none"){
-     
       document.getElementById("nav_bar_pages").style.display = "flex";
     } else {
       document.getElementById("nav_bar_pages").style.display = "block";
-      
     }
-
   }
+
+  if (activeModal != null){
+    if (window.innerWidth > 900 &&  document.getElementById(activeModal.id).style.display != "none"){
+      document.getElementById(activeModal.id).style.display = "grid";
+    } else {
+      document.getElementById(activeModal.id).style.display = "block";
+    }
+}
 });
 
 onload = (event) => {
@@ -53,7 +58,11 @@ function setActive(page){
 function showModal(clicked_div){
   activeProject = clicked_div.id.replace("project_", "");
   const modal = document.getElementById(`modal_${activeProject}`);
-  modal.style.display = "grid";
+  if (window.innerWidth > 700){
+    modal.style.display = "grid";
+  } else {
+    modal.style.display = "block";
+  }
   activeModal = modal;
   document.getElementById(`${activeModal.id}_container`).style.display = "grid";
   document.activeElement.blur();
@@ -62,7 +71,9 @@ function showModal(clicked_div){
 
 // closing modal on clicking the span
 function closeModal() {
-  if (activeModal != null && document.getElementById(activeModal.id).style.display == "grid"){
+  console.log(`clicking close span`);
+  if (activeModal != null && (document.getElementById(activeModal.id).style.display == "grid" || document.getElementById(activeModal.id).style.display == "block")){
+    console.log(`closing modal`);
     document.getElementById(activeModal.id).style.display = "none";
     document.getElementById(`${activeModal.id}_container`).style.display = "none";
   }
