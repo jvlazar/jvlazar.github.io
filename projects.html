@@ -41,17 +41,19 @@
                     <!-- ON CLICK, ADD MODAL THAT POPS UP CONTAINING IFRAME OF THE WEBSITE -->
                       
                 </div>
-                    <div class="modal_content" id="modal_paired_actors">
-                        <div class="column">
-                            <span class="close" id="close_modal" onclick="closeModal()">&times;</span>
-                            <br>
-                            <p class="languages"></p>
-                            <p class="tools"></p>
-                            <p class="modal_info"></p>
-                            <a class="link" href="#" alt="link to app">Visit webpage</a>
-                        </div>
-                        <div class="column">
-                        <iframe src="https://pairedactors.netlify.app/"></iframe>
+                    <div id="modal_paired_actors_container" class="modal">
+                        <div class="modal_content" id="modal_paired_actors">
+                            <div class="column">
+                                <span class="close" id="close_modal" onclick="closeModal()">&times;</span>
+                                
+                                <p class="languages"></p>
+                                <p class="tools"></p>
+                                <p class="modal_info"></p>
+                                <a class="link" href="#" alt="link to app">Visit webpage</a>
+                            </div>
+                            <div class="column">
+                            <iframe src="https://pairedactors.netlify.app/"></iframe>
+                            </div>
                         </div>
                     </div>
                 <div class="project" id="project_wordle" onclick="showModal(this)">
@@ -62,19 +64,21 @@
 
                         </div>
                     </div>
-                    <div class="modal_content" id="modal_wordle">
-                        <div class="column">
-                            <br>
-                            <span class="close" id="close_modal" onclick="closeModal()">&times;</span>
-                            <p class="languages"></p>
-                            <p class="tools"></p>
-                            <p class="modal_info"></p>
-                            <a class="link" href="#" alt="link to app">Visit webpage</a>
+                    <div id="modal_wordle_container" class="modal">
+                        <div class="modal_content" id="modal_wordle">
+                            <div class="column">
+                               
+                                <span class="close" id="close_modal" onclick="closeModal()">&times;</span>
+                                <p class="languages"></p>
+                                <p class="tools"></p>
+                                <p class="modal_info"></p>
+                                <a class="link" href="#" alt="link to app">Visit webpage</a>
+                            </div>
+                            <div class="column">
+                                <iframe src="https://jvlazar.github.io/wordle_replica"></iframe>
+                            </div>
                         </div>
-                        <div class="column">
-                            <iframe src="https://jvlazar.github.io/wordle_replica"></iframe>
                         </div>
-                    </div>
                 <div class="project private" id="flash_cards"> 
                         <p class="project_title">ASL Flash Cards (Private)</p>
                         <div class="project_info">
