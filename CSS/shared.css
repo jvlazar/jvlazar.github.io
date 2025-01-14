@@ -54,6 +54,58 @@
     /* background-color: red; */
   }
 
+  .icon{
+    display: none;
+  }
+
+  .topNav{
+    display: flex;
+  }
+
+
+  @media (width <= 700px){
+    .nav_bar{
+      /* background-color: red; */
+    }
+
+    .nav_bar_pages{
+      width: 150px;
+      text-align: left;
+      padding-left: 20px;
+      display: none;
+      background-color: var(--background_text);
+      margin-top: 50px;
+      box-shadow: 0px 5px 10px var(--shadow);
+      /* background-color: blue; */
+      z-index: 1;
+    }
+
+    .nav_bar_name:hover{
+      background-color: red;
+      cursor: pointer;
+    }
+
+    .icon{
+      display: flex;
+      width: 16px;
+    }
+  
+    .topNav a.icon {
+      background: transparent;
+      display: block;
+      position: absolute;
+      right: 30px;
+      top: 0;
+      font-size: 40px;
+      z-index: 0;
+    }
+
+   
+
+  
+
+
+  }
 
  
   

@@ -3,6 +3,13 @@ let activeProject = null;
 let activeTab = null;
 let projectData = null;
 
+window.addEventListener('resize', function(){
+  if (window.innerWidth > 700 &&  document.getElementById("nav_bar_pages").style.display != "none"){
+    document.getElementById("nav_bar_pages").style.display = "flex";
+  } else {
+    document.getElementById("nav_bar_pages").style.display = "block";
+  }
+});
 
 onload = (event) => {
   if (localStorage.getItem("active tab") != "null"){
@@ -12,9 +19,19 @@ onload = (event) => {
   }
 }
 
+function myFunction() {
+  console.log(`clicked`);
+  var x = document.getElementById("nav_bar_pages");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+} 
 
 // set active tab
 function setActive(page){
+  // console.log(`clicked on ${page.id}`);
   if (page.id != "nav_bar_name"){
     activeTab = page.id;
   } else {
