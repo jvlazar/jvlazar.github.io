@@ -119,6 +119,31 @@ a:active {
 
 @media (width <= 700px){
 
-  
+  .name_card{
+    height: 450px;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding: auto;
+    /* background-color: red; */
+  }
+
+.name_card_name{
+  display: block;
+  text-wrap: wrap;
+  font-size: 3em;
+  /* background-color: red; */
+  padding-top:0;
+  margin: 0;
+  margin-top: -50px;
+  /* top: 0; */
+}
+
+.name_card_text{
+  display: block;
+  text-align: left;
+  font-size: 16px;
+}
+
 
 }
