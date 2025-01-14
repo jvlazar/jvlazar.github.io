@@ -30,8 +30,11 @@ body{
   background-color: var(--background);
   display: flex;
   justify-content: center;
+ 
   /* background: linear-gradient(var(--pale-blue-trans), var(--light-purple-trans)); */
 }
+
+
 
 ::selection {
   background: var(--text_highlight);
