@@ -2,12 +2,18 @@ let activeModal = null;
 let activeProject = null;
 let activeTab = null;
 let projectData = null;
+let menu = "inactive";
 
 window.addEventListener('resize', function(){
-  if (window.innerWidth > 700 &&  document.getElementById("nav_bar_pages").style.display != "none"){
-    document.getElementById("nav_bar_pages").style.display = "flex";
-  } else {
-    document.getElementById("nav_bar_pages").style.display = "block";
+  if (menu == "active"){
+    if (window.innerWidth > 700 &&  document.getElementById("nav_bar_pages").style.display != "none"){
+     
+      document.getElementById("nav_bar_pages").style.display = "flex";
+    } else {
+      document.getElementById("nav_bar_pages").style.display = "block";
+      
+    }
+
   }
 });
 
@@ -20,12 +26,13 @@ onload = (event) => {
 }
 
 function myFunction() {
-  console.log(`clicked`);
   var x = document.getElementById("nav_bar_pages");
   if (x.style.display === "block") {
     x.style.display = "none";
+    menu = "inactive";
   } else {
     x.style.display = "block";
+    menu = "active";
   }
 } 
 

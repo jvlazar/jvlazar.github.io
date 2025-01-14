@@ -64,9 +64,7 @@
 
 
   @media (width <= 700px){
-    .nav_bar{
-      /* background-color: red; */
-    }
+  
 
     .nav_bar_pages{
       width: 150px;

@@ -56,3 +56,16 @@
  0%{opacity: 0;}
  100%{opacity: 100%;}
 }
+
+@media (width <= 700px){
+    .column_div{
+        display: block;
+    }
+
+    .profile_image{
+        max-width: 500px;
+        width: 70vw;
+        height: 70vw;
+    }
+
+}
