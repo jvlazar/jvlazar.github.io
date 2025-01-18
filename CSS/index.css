@@ -28,12 +28,19 @@ body{
   margin: 0;
   padding: 0;
   background-color: var(--background);
-  display: flex;
+  display: block;
   justify-content: center;
+ 
  
   /* background: linear-gradient(var(--pale-blue-trans), var(--light-purple-trans)); */
 }
 
+
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+  }
+}
 
 
 ::selection {
@@ -50,6 +57,8 @@ body{
   position: absolute;
   margin: auto;
   top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
   color: var(--nav_bar_text_color);
 }
