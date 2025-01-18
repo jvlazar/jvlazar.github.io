@@ -67,9 +67,7 @@ function showModal(clicked_div){
   document.getElementById(`${activeModal.id}_container`).style.display = "grid";
   document.activeElement.blur();
   showData();
-  document.getElementById("nav_bar").style.zIndex = "0";
-  document.getElementById("nav_bar").style.position = "relative";
-  console.log(`active modal is ${activeModal.id}`);
+  
 }
 
 // closing modal on clicking the span
@@ -81,8 +79,7 @@ function closeModal() {
     document.getElementById(activeModal.id).style.display = "none";
     document.getElementById(`${activeModal.id}_container`).style.display = "none";
   }
-  document.getElementById("nav_bar").style.zIndex = "1";
-  document.getElementById("nav_bar").style.position = "fixed";
+
 }
 
 
