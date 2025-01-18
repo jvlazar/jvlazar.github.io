@@ -19,7 +19,6 @@
     padding: 5px 0;
     padding-left: 10px;
     text-align:left;
-    filter: none;
 }
 
 .project:hover{
@@ -89,6 +88,7 @@ a:hover{
     animation-duration: 1s, 1.25s;
     box-shadow: 0px 5px 10px var(--shadow);
     overflow: auto;
+    line-height: 35px;
 }
 
 .column:nth-child(1) p{
@@ -101,11 +101,13 @@ iframe{
     margin: auto;
     margin-right: 0;
     width: 320px;
-    height: 600px;;
+    height: 700px;;
 }
 
 .link{
     display: flex;  
+    /* position: absolute;
+    bottom: 0; */
 }
 
 @keyframes slide {
@@ -154,6 +156,7 @@ iframe{
     display: none;
     left: 0;
     width: 100%;
+    max-height: 1000px;
    }
 
    .modal_content{
@@ -161,23 +164,49 @@ iframe{
     left: 0;
     min-width: 200px;
     width: 90%;
+    height: 100%;
+    max-height: 1000px;
+    display: block;
+    padding-top: 100px;
    }
+
+   
   
     .column:nth-child(1) p{
         text-align: left;
-        margin-top:10px;
+        margin-top:20px;
         margin-left: 0;
     }
 
- 
-
     .languages{
-        /* color: red; */
+        padding-top: 30px;
+        display: flex;
+        align-items: center;
+        /* height: 100px; */
+       
+        
     }
 
-    .modal_content p{
-        padding-top: 10px;
+    .modal_content{
+        /* padding-top: 10px; */
     }
 
+    .link{
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    .close{
+        margin-top: 100px;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        font-size: 50px;
+    }
+
+    /* iframe{
+        display: flex;
+        float: center;
+    } */
  
 }

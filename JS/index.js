@@ -14,7 +14,7 @@ window.addEventListener('resize', function(){
   }
 
   if (activeModal != null){
-    if (window.innerWidth > 900 &&  document.getElementById(activeModal.id).style.display != "none"){
+    if (window.innerWidth > 700 &&  document.getElementById(activeModal.id).style.display != "none"){
       document.getElementById(activeModal.id).style.display = "grid";
     } else {
       document.getElementById(activeModal.id).style.display = "block";
@@ -67,16 +67,22 @@ function showModal(clicked_div){
   document.getElementById(`${activeModal.id}_container`).style.display = "grid";
   document.activeElement.blur();
   showData();
+  document.getElementById("nav_bar").style.zIndex = "0";
+  document.getElementById("nav_bar").style.position = "relative";
+  console.log(`active modal is ${activeModal.id}`);
 }
 
 // closing modal on clicking the span
 function closeModal() {
   console.log(`clicking close span`);
+  console.log(`trying to close ${activeModal.id}`);
   if (activeModal != null && (document.getElementById(activeModal.id).style.display == "grid" || document.getElementById(activeModal.id).style.display == "block")){
     console.log(`closing modal`);
     document.getElementById(activeModal.id).style.display = "none";
     document.getElementById(`${activeModal.id}_container`).style.display = "none";
   }
+  document.getElementById("nav_bar").style.zIndex = "1";
+  document.getElementById("nav_bar").style.position = "fixed";
 }
 
 
@@ -93,13 +99,13 @@ async function showData(){
         .then(response => response.json());
         for (let index = 0; index < data.length; index++){
           if (data[index].modal == activeModal.id){
-            document.getElementsByClassName("languages")[index].innerHTML = "Languages: " + data[index].language;
-            document.getElementsByClassName("modal_info")[index].innerHTML ="Project Description: <br> " + data[index].description;
+            document.getElementsByClassName("languages")[index].innerHTML = "<b>Languages:</b> " + data[index].language;
+            document.getElementsByClassName("modal_info")[index].innerHTML ="<b>Project Description</b>: <br> " + data[index].description;
             document.getElementsByClassName("link")[index].href = data[index].link;
             if (data[index].tools != null){
-              document.getElementsByClassName("tools")[index].innerHTML = "Additional Tools: " + data[index].tools;
+              document.getElementsByClassName("tools")[index].innerHTML = "<b>Additional Tools:</b> " + data[index].tools;
             } else{
-              document.getElementsByClassName("tools")[index].innerHTML = "Additional Tools: None";
+              document.getElementsByClassName("tools")[index].innerHTML = "<b>Additional Tools:</b> None";
             }
           }
         }     

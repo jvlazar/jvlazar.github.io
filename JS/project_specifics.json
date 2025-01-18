@@ -15,6 +15,15 @@
         "tools": null,
         "description": "This project is an attempt to re-create the popular web-game 'Wordle', originally created by Josh Wardle. Upon each page refresh, a new word is loaded for the user to guess. The user has to guess the word in 6 tries. If the letter and its position is correct, the tile turns green. If that letter is present in the word, but isn't in the correct position, the tile turns yellow.",
         "link": "https://jvlazar.github.io/wordle_replica/"
+    },
+    {
+        "modal": "modal_fylo",
+        "name": "fylo",
+        "language": "HTML, CSS",
+        "tools": null,
+        "description": "This project replicates the landing page from the design images and assets provided by Frontend Mentor. <p> This project is referenced from <a target='_blank' href='https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd'> Frontend Mentor</a> </p>",
+        "link": "https://jvlazar.github.io/fylo_landing_page_dark_theme/"
     }
+
 ]
 
