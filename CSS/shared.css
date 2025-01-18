@@ -87,7 +87,6 @@ body{
     }
 
     .nav_bar_name:hover{
-      background-color: red;
       cursor: pointer;
     }
 
