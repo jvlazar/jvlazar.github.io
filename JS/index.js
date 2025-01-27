@@ -89,9 +89,12 @@ function closeModal() {
 
 // close modal by clicking outside of it
 window.onclick = function(event) {
-  myModal = document.getElementById(`${activeModal.id}_container`);
-  if (event.target == myModal) {
-    myModal.style.display = "none";
+  if (localStorage.getItem("active tab") == "name_card_projects"){
+    myModal = document.getElementById(`${activeModal.id}_container`);
+    if (event.target == myModal) {
+      myModal.style.display = "none";
+    }
+
   }
 } 
 
@@ -125,7 +128,7 @@ async function showArt(){
       // const ratio = calculateAspectRatioFit(data[index].width, data[index].height, 40, 100);
       image.setAttribute("width",  (data[index].width/10)+"px");
       image.setAttribute("height", (data[index].height/10)+"px");
-      image.setAttribute("onmouseover", data[index].id);
+      image.setAttribute("onclick", "showArtInfo(this)");
       const info = document.createElement("div");
       info.setAttribute("id","info");
       const title = document.createElement("p");
@@ -143,9 +146,9 @@ async function showArt(){
     }     
 }
  
-// function showArtInfo (artID) {
-//   console.log(artID);
-// }
+function showArtInfo (piece) {
+  
+}
 
 function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
 
