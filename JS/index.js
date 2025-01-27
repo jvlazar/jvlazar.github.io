@@ -2,6 +2,7 @@ let activeModal = null;
 let activeProject = null;
 let activeTab = null;
 let projectData = null;
+let activeArtModal = null;
 let menu = "inactive";
 
 window.addEventListener('resize', function(){
@@ -19,6 +20,8 @@ window.addEventListener('resize', function(){
     } else {
       document.getElementById(activeModal.id).style.display = "block";
     }
+
+  
 }
 });
 
@@ -76,13 +79,22 @@ function showModal(clicked_div){
 
 // closing modal on clicking the span
 function closeModal() {
-  console.log(`clicking close span`);
-  console.log(`trying to close ${activeModal.id}`);
-  if (activeModal != null && (document.getElementById(activeModal.id).style.display == "grid" || document.getElementById(activeModal.id).style.display == "block")){
-    console.log(`closing modal`);
-    document.getElementById(activeModal.id).style.display = "none";
-    document.getElementById(`${activeModal.id}_container`).style.display = "none";
-  }
+  console.log(`closing modal`);
+  if (activeTab == "name_card_projects"){
+    console.log(`clicking close span`);
+    console.log(`trying to close ${activeModal.id}`);
+    if (activeModal != null && (document.getElementById(activeModal.id).style.display == "grid" || document.getElementById(activeModal.id).style.display == "block")){
+      console.log(`closing modal`);
+      document.getElementById(activeModal.id).style.display = "none";
+      document.getElementById(`${activeModal.id}_container`).style.display = "none";
+    }
+  } else if (activeTab == "name_card_art"){
+    console.log(`in close modal function`);
+    if (activeArtModal != null){
+     
+    }
+  } 
+  
 
 }
 
@@ -93,6 +105,13 @@ window.onclick = function(event) {
     myModal = document.getElementById(`${activeModal.id}_container`);
     if (event.target == myModal) {
       myModal.style.display = "none";
+    }
+
+  } else if (localStorage.getItem("active tab") == "name_card_art"){
+    myModal = document.getElementById(`${activeArtModal}`);
+    if (event.target == myModal) {
+      myModal.style.display = "none";
+      activeArtModal = null;
     }
 
   }
@@ -122,17 +141,46 @@ async function showArt(){
     console.log(`showing art`);
     for (let index = 0; index < data.length; index++){
       const node = document.createElement("div");
+      node.setAttribute("id", data[index].id);
       const image = document.createElement("img");
       image.setAttribute("src", `${data[index].link}`);
       image.setAttribute("id", `${data[index].id}`);
-      // const ratio = calculateAspectRatioFit(data[index].width, data[index].height, 40, 100);
       image.setAttribute("width",  (data[index].width/10)+"px");
       image.setAttribute("height", (data[index].height/10)+"px");
-      image.setAttribute("onclick", "showArtInfo(this)");
+      node.setAttribute("onclick", `showArtModal(${data[index].id})`);
       const info = document.createElement("div");
       info.setAttribute("id","info");
+
+
+      // create modal info
+
+      const artModal = document.createElement("div");
+      artModal.setAttribute("class", "art_modal");
+      artModal.setAttribute("id", `${data[index].id}_modal_container`);
+      const artModalContent = document.createElement("div");
+      artModalContent.setAttribute("class", "art_modal_content");
+      artModalContent.setAttribute("id", `${data[index].id}_modal`);
+      artModal.appendChild(artModalContent);
+      // const closeSpan = document.createElement("span");
+      // closeSpan.setAttribute("class", "close");
+      // closeSpan.setAttribute("id", "close");
+      // closeSpan.setAttribute("onclick", `closeModal()`);
+      // closeSpan.innerHTML = "&times;";
+      const fullImage = document.createElement("img");
+      fullImage.setAttribute("src", `${data[index].link}`);
+      fullImage.setAttribute("width", `${(data[index].width)/5}px`);
+      fullImage.setAttribute("height", `${(data[index].height/5)}px`);
+      
+      // artModal.appendChild(closeSpan);
+      artModal.appendChild(fullImage);
+      node.appendChild(artModal);
       const title = document.createElement("p");
       title.innerHTML = data[index].title;
+
+
+
+
+
 
       const fanart = document.createElement("p");
       data[index].fanart != null ? fanart.innerHTML=data[index].fanart: null;
@@ -146,14 +194,13 @@ async function showArt(){
     }     
 }
  
-function showArtInfo (piece) {
-  
+// create a modal for the art piece
+function showArtModal (piece) {
+
+  console.log(piece);
+  console.log(piece.getElementsByClassName(`art_modal`));
+  piece.getElementsByClassName(`art_modal`)[0].style.display = "block";
+  activeArtModal =  piece.getElementsByClassName(`art_modal`)[0].id;
+  console.log(`active art modal is ${activeArtModal}`);
 }
 
-function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
-
-  var ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
-  console.log(ratio);
-
-  return { width: srcWidth*ratio, height: srcHeight*ratio };
-}
