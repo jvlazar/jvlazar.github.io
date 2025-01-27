@@ -3,6 +3,7 @@ let activeProject = null;
 let activeTab = null;
 let projectData = null;
 let activeArtModal = null;
+// let closeSpan = null;
 let menu = "inactive";
 
 window.addEventListener('resize', function(){
@@ -33,6 +34,7 @@ onload = (event) => {
 
     if (activeTab == "name_card_art"){
       showArt();
+     
     }
   }
 }
@@ -50,7 +52,7 @@ function myFunction() {
 
 // set active tab
 function setActive(page){
-  // console.log(`clicked on ${page.id}`);
+  //
   if (page.id != "nav_bar_name"){
     activeTab = page.id;
   } else {
@@ -79,19 +81,20 @@ function showModal(clicked_div){
 
 // closing modal on clicking the span
 function closeModal() {
-  console.log(`closing modal`);
+ 
   if (activeTab == "name_card_projects"){
-    console.log(`clicking close span`);
-    console.log(`trying to close ${activeModal.id}`);
+   
+   
     if (activeModal != null && (document.getElementById(activeModal.id).style.display == "grid" || document.getElementById(activeModal.id).style.display == "block")){
-      console.log(`closing modal`);
+     
       document.getElementById(activeModal.id).style.display = "none";
       document.getElementById(`${activeModal.id}_container`).style.display = "none";
     }
   } else if (activeTab == "name_card_art"){
-    console.log(`in close modal function`);
-    if (activeArtModal != null){
-     
+   
+    if (activeArtModal != null && document.getElementById(activeArtModal).style.display == "flex"){
+      document.getElementById(activeArtModal).style.display = "none";
+      activeArtModal = null;
     }
   } 
   
@@ -107,9 +110,17 @@ window.onclick = function(event) {
       myModal.style.display = "none";
     }
 
-  } else if (localStorage.getItem("active tab") == "name_card_art"){
+  } else if (localStorage.getItem("active tab") == "name_card_art" && activeArtModal != null){
     myModal = document.getElementById(`${activeArtModal}`);
+    myCloseSpan = document.getElementById(`${activeArtModal.split("_")[0]}_close`);
+   
     if (event.target == myModal) {
+      
+     
+      myModal.style.display = "none";
+      activeArtModal = null;
+    } else if ( event.target == myCloseSpan){
+     
       myModal.style.display = "none";
       activeArtModal = null;
     }
@@ -138,8 +149,10 @@ async function showData(){
 async function showArt(){
   let data = await fetch('./JS/art_links.json')
     .then(response => response.json());
-    console.log(`showing art`);
+   
     for (let index = 0; index < data.length; index++){
+
+      // creating the div on the main page, with the image
       const node = document.createElement("div");
       node.setAttribute("id", data[index].id);
       const image = document.createElement("img");
@@ -160,19 +173,23 @@ async function showArt(){
       const artModalContent = document.createElement("div");
       artModalContent.setAttribute("class", "art_modal_content");
       artModalContent.setAttribute("id", `${data[index].id}_modal`);
+      artModalContent.setAttribute("width", data[index].width+"px");
       artModal.appendChild(artModalContent);
-      // const closeSpan = document.createElement("span");
-      // closeSpan.setAttribute("class", "close");
-      // closeSpan.setAttribute("id", "close");
-      // closeSpan.setAttribute("onclick", `closeModal()`);
-      // closeSpan.innerHTML = "&times;";
+      const closeSpan = document.createElement("span");
+      closeSpan.setAttribute("class", "close");
+      closeSpan.setAttribute("id", `${data[index].id}_close`);
+      // closeSpan.setAttribute("onclick", `closeArtModal()`);
+      closeSpan.innerHTML = "&times;";
+
       const fullImage = document.createElement("img");
       fullImage.setAttribute("src", `${data[index].link}`);
-      fullImage.setAttribute("width", `${(data[index].width)/5}px`);
-      fullImage.setAttribute("height", `${(data[index].height/5)}px`);
+      fullImage.setAttribute("width", `${(data[index].width)/6}px`);
+      fullImage.setAttribute("height", `${(data[index].height/6)}px`);
+      fullImage.setAttribute("class", `full_image`);
       
-      // artModal.appendChild(closeSpan);
-      artModal.appendChild(fullImage);
+      artModalContent.appendChild(closeSpan);
+      artModalContent.appendChild(fullImage);
+
       node.appendChild(artModal);
       const title = document.createElement("p");
       title.innerHTML = data[index].title;
@@ -196,11 +213,33 @@ async function showArt(){
  
 // create a modal for the art piece
 function showArtModal (piece) {
-
-  console.log(piece);
-  console.log(piece.getElementsByClassName(`art_modal`));
-  piece.getElementsByClassName(`art_modal`)[0].style.display = "block";
+  closeSpan = document.getElementById('close');
+ 
+ 
+  piece.getElementsByClassName(`art_modal`)[0].style.display = "flex";
   activeArtModal =  piece.getElementsByClassName(`art_modal`)[0].id;
-  console.log(`active art modal is ${activeArtModal}`);
+ 
+  document.activeElement.blur();
 }
+
+function closeArtModal(){
+ 
+ 
+  const id = activeArtModal.split("_");
+ 
+  if (document.getElementById(`${id[0]}_modal_container`).style.display == "flex"){
+    document.getElementById(`${id[0]}_modal`).style.display = "none";
+    document.getElementById(`${id[0]}_modal_container`).style.display = "none";
+   
+   
+   
+    activeArtModal = null;
+  }
+
+  
+  document.activeElement.blur();
+}
+ 
+  
+
 
