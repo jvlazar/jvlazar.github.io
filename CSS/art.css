@@ -1,0 +1,52 @@
+
+.contact i{
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+}
+.art {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    /* background-color: red; */
+    column-gap: 20px;
+    align-items: center;
+    text-align: center;
+    place-content: center;
+}
+
+.art p{
+    margin-top: -10px;
+    text-align: left;
+}
+
+img{
+    object-fit: cover;
+    margin: 20px 0;
+    
+}
+
+img:hover{
+    cursor: pointer;
+
+}
+
+#info{
+    display: block;
+   
+}
+@media (width <= 700px){
+    .art{
+        display: block;
+        margin: auto;
+        padding: auto;
+        align-items: center;
+        text-align: center;
+        column-gap: none;
+    }
+
+    .art p{
+        margin-top: -10px;
+        text-align: center;
+        
+    }    
+}

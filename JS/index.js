@@ -27,6 +27,10 @@ onload = (event) => {
     activeTab = localStorage.getItem("active tab");
     var li = document.getElementById(activeTab);
     li.classList.add(`name_card_para_active`);
+
+    if (activeTab == "name_card_art"){
+      showArt();
+    }
   }
 }
 
@@ -108,4 +112,45 @@ async function showData(){
         }     
 }
   
+
+async function showArt(){
+  let data = await fetch('./JS/art_links.json')
+    .then(response => response.json());
+    console.log(`showing art`);
+    for (let index = 0; index < data.length; index++){
+      const node = document.createElement("div");
+      const image = document.createElement("img");
+      image.setAttribute("src", `${data[index].link}`);
+      image.setAttribute("id", `${data[index].id}`);
+      // const ratio = calculateAspectRatioFit(data[index].width, data[index].height, 40, 100);
+      image.setAttribute("width",  (data[index].width/10)+"px");
+      image.setAttribute("height", (data[index].height/10)+"px");
+      image.setAttribute("onmouseover", data[index].id);
+      const info = document.createElement("div");
+      info.setAttribute("id","info");
+      const title = document.createElement("p");
+      title.innerHTML = data[index].title;
+
+      const fanart = document.createElement("p");
+      data[index].fanart != null ? fanart.innerHTML=data[index].fanart: null;
+      info.appendChild(title);
+      info.appendChild(fanart);
+      node.appendChild(image);
+      node.appendChild(info);
+      document.getElementById("art").appendChild(node);
+     
+
+    }     
+}
  
+// function showArtInfo (artID) {
+//   console.log(artID);
+// }
+
+function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
+
+  var ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
+  console.log(ratio);
+
+  return { width: srcWidth*ratio, height: srcHeight*ratio };
+}
